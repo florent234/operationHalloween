@@ -1,0 +1,741 @@
+/*
+body{
+    margin: 0;
+    color: #1B2631;
+    font-family: Tahoma;
+    background-color: #F2F3F4;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+input,.btnConnexion{
+    padding: 5px 10px;
+    border-radius: 0;
+    border: none;
+    width: 150px;
+    margin: 10px auto;
+    outline: none;
+}
+
+.btnConnexion{
+    background: #E74C3C;
+    color: white;
+    transition: 0.2s;
+}
+
+
+.btnConnexion:hover{
+    background: #F4D03F;
+    color: white;
+}
+
+#h1Layout{
+    color: white;
+}
+
+*/
+/*/////////////////header-nav//////////////////////*/
+/*
+header{
+    background-color: #1B2631;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aMenu{
+    padding: 4px;
+    transition: 0.2s;
+    margin: 0px 4px 0px 4px;
+
+}
+
+.aMenu:hover{
+    background-color: #E74C3C;
+    color: white;
+}
+*/
+/*////////////////////connection///////////////////*/
+/*
+#wrap{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formConnexion{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formConnexion>input{
+    background: white;
+}
+
+#h2FormConnexion{
+    margin-bottom: 40px;
+    color: #1B2631;
+}
+
+#lblRemember{
+    color: #1B2631;
+
+}
+#remember_me{
+    width: 20px;
+    position: relative;
+    top: 2px;
+}
+
+#aMdpOublier{
+    color: #1B2631;
+}
+
+#pMdpOublier:hover{
+    border-bottom: 1px solid #1B2631;
+}
+#formConnexion>div>input{
+    border: 1px solid #1B2631;
+}
+*/
+/*            PARTI MOT ANIME      */
+/*
+$red : red;
+$blue : blue;
+$green : green;
+*/
+/*
+body{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3rem;
+}
+*/
+#main {
+    color: white;
+}
+#letters {
+    margin : 0 auto;
+    width : 100%;
+    display: flex;
+    color: white;
+    text-shadow: 0 0 5px dimgrey, 0 0 10px black;
+    opacity : 90%;
+}
+
+.letter {
+    animation-name: right;
+    animation-fill-mode: forwards;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+}
+.letter2{
+    animation-name: up;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+}
+.letter:nth-child(2){
+    animation-delay: 5.3s;
+}
+.letter:nth-child(3){
+    animation-delay: 5.4s;
+}
+.letter:nth-child(4){
+    animation-delay: 5.2s;
+}
+.letter:nth-child(5){
+    animation-delay: 5.1s;
+}
+.letter:nth-child(6){
+    animation-delay: 5.2s;
+}
+.letter:nth-child(7){
+    animation-delay: 5.3s;
+}
+.letter:nth-child(8){
+    animation-delay: 5.1s;
+}
+.letter:nth-child(9){
+    animation-delay: 5.5s;
+}
+@keyframes up {
+    0% {
+        transform: translate(0,0) skew(0);
+    }
+    20% {
+        transform: translate(0,-40%) skew(-5deg);
+    }
+    40% {
+        transform: translate(0,-80%) skew(8deg);
+    }
+    60% {
+        transform: translate(0,-120%) skew(-7deg);
+    }
+    80% {
+        transform: translate(0,-160%) skew(4deg);
+    }
+    100% {
+        transform: translate(0,-200%) skew(0);
+        opacity: 0;
+    }
+}
+@keyframes right {
+    0%{
+        transform: translate(0,0) skew(0);
+    }
+    20% {
+        transform: translate(0,0) skew(0);
+    }
+    30% {
+        transform: translate(40%, 0) skew(-5deg);
+    }
+    40% {
+        transform: translate(80% , 0) skew(8deg);
+    }
+    50% {
+        transform: translate(120% ,0) skew(-7deg);
+    }
+    60% {
+        transform: translate(160%, 0) skew(4deg);
+    }
+    70% {
+        transform: translate(200%, 0) skew(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(200%, 0) skew(0);
+        opacity: 0;
+    }
+}
+
+/*//////////////////:accueil/////////////////////*/
+
+
+#fantome1, #fantome2, #fantome3, #fantome4, #fantome5, #fantome6{
+    position : absolute;
+}
+
+/*            FANTOME AVANT ANIMATION        */
+.fantome1 {
+    z-index: 100;
+    animation-name: flotte;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    opacity: 70%;
+    animation-timing-function: linear;
+}
+.fantome2{
+    z-index: 100;
+    animation-name: flotte;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes flotte{
+    0% {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+    12.5%{
+        transform: translate(5px, -5px) rotate(-1deg)
+    }
+    25%{
+        transform: translate(10px, 0px) rotate(1deg)
+    }
+    37.5%{
+        transform: translate(5px, -5px) rotate(0deg)
+    }
+    50%{
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    67.5%{
+        transform: translate(-5px, -5px) rotate(1deg)
+    }
+    75%{
+        transform: translate(-10px, 0px) rotate(0deg)
+    }
+    87.5%{
+        transform: translate(-5px, -5px) rotate(-1deg)
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+}
+
+/*///// ANIMATION GAGNANT PHONE ///*/
+
+.classGagnant1{
+    z-index : 200;
+    animation-name: avancer;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer{
+    0%{
+        width:30%;
+    }
+    50%{
+        transform: translate(-160px, 0px) rotate(360deg);
+        width:50%;
+    }
+    100%{
+        transform: translate(-180px, 0px) rotate(360deg);
+        width:80%;
+    }
+}
+.classGagnant2{
+    z-index : 200;
+    animation-name: avancer2;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer2{
+    0%{
+        width:30%;
+    }
+    50%{
+        transform: translate(12%, -100px) rotate(360deg);
+        width:50%;
+    }
+    100%{
+        transform: translate(12%, -200px) rotate(360deg);
+        width:80%;
+    }
+}
+
+
+/*                   TELEPHONE        */
+
+@media screen and (max-width:900px) {
+
+    #letters {
+        margin-top: 50%;
+        vertical-align: center;
+        font-size: 1.5rem;
+    }
+    .button_accueil{
+        z-index : 300;
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        margin : auto;
+        text-align: center;
+        margin-top: 70%;
+        vertical-align: center;
+        background-color: orange;
+        border-color: orange;
+    }
+    html {
+        margin:0;
+        padding:0;
+    }
+    body{
+        background: url("/operationHalloween/public/photos/Halloween/fondHalloween2.jpg") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
+        overflow: hidden;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    #divAccueilPhone{
+        margin-bottom: auto;
+        width: 100%;
+        text-align: center;
+        visibility : visible;
+    }
+    #divAccueilTablette,#divAccueilOrdi {
+        display: none;
+    }
+
+    #fantome1{
+        z-index : 150;
+        width: 30%;
+        top : 350px; left : 0;
+    }
+    #fantome2{
+        z-index : 150;
+        width: 30%;
+        top : 50px; left : 200px;
+    }
+    .btn_class{
+        z-index : 300;
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        top : 90% ; left : 35%;
+        background-color: orange;
+        border-color: orange;
+    }
+
+}
+
+/*                    TABLETTE                  */
+
+.classGagnant3{
+    z-index : 200;
+    animation-name: avancer3;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant4{
+    z-index : 200;
+    animation-name: avancer4;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer3{
+    0%{
+        width:30%;
+        opacity: 0;
+    }
+    50%{
+        transform: translate(150px, -500px) rotate(180deg);
+        width:50%;
+        z-index: 300;
+        opacity : 0.3;
+    }
+    100%{
+        transform: translate(150px, -500px) rotate(360deg);
+        width:70%;
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer4{
+    0%{
+        width: 100px;
+        opacity : 0;
+    }
+    50%{
+        transform: translate(-350px, 10%) rotate(360deg);
+        width:300px;
+        z-index: 300;
+        opacity : 0.3;
+    }
+    100%{
+        transform: translate(-350px, 20%) rotate(360deg);
+        width:500px;
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+
+/*            TABLETTE         */
+@media screen and (min-width:900px) and (max-width:1400px) {
+    #letters {
+        font-size: 5rem;
+    }
+    html {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: url("/operationHalloween/public/photos/Halloween/fondHalloween.jpg") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    #divAccueilTablette {
+        margin-bottom: auto;
+        width: 100%;
+        text-align: center;
+        visibility: visible;
+    }
+    #divAccueilPhone,#divAccueilOrdi {
+        display: none;
+    }
+
+    .button_accueil {
+        z-index: 300;
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-top: 40%;
+        vertical-align: center;
+        background-color: orange;
+        border-color: orange;
+    }
+
+    #fantome3{
+        z-index: 150;
+        width: 20%;
+        top: 450px;
+        left: 0;
+    }
+
+    #fantome4 {
+        z-index: 150;
+        width: 100px;
+        top: 50px;
+        left: 700px;
+    }
+    .btn_class{
+        z-index : 300;
+        position: absolute;
+        width: 200px;
+        height: 70px;
+        top : 90% ; left : 40%;
+        background-color: orange;
+        border-color: orange;
+    }
+}
+
+.classGagnant5{
+    z-index : 200;
+    animation-name: avancer5;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant6{
+    z-index : 200;
+    animation-name: avancer6;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer5{
+    0%{
+        width:30%;
+        opacity: 0;
+    }
+    50%{
+        transform: translate(500px, -500px) rotate(180deg);
+        width:40%;
+        z-index: 300;
+        opacity : 0.3;
+    }
+    100%{
+        transform: translate(500px, -500px) rotate(360deg);
+        width:50%;
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer6 {
+    0% {
+        width: 100px;
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0px, 0%) rotate(360deg);
+        width: 300px;
+        z-index: 300;
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(0px, 0%) rotate(360deg);
+        width: 500px;
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
+
+/*               ORDINATEUR            */
+@media screen and (min-width:1400px)  {
+    #letters {
+        font-size: 5rem;
+    }
+    html {
+        margin:0;
+        padding:0;
+    }
+    body{
+        background: url("/operationHalloween/public/photos/Halloween/fondHalloween.jpg") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    #divAccueilOrdi{
+        margin-top: 10%;
+        margin-bottom: auto;
+        height: 100%;
+        text-align: center;
+        visibility : visible;
+    }
+    #divAccueilPhone,#divAccueilTablette {
+        display: none;
+    }
+    .button_accueil{
+        z-index : 300;
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        margin : auto;
+        text-align: center;
+        margin-top: 30%;
+        vertical-align: center;
+        background-color: orange;
+        border-color: orange;
+    }
+    #fantome5{
+        z-index : 150;
+        width: 150px;
+        top : 350px; left : 0;
+    }
+    #fantome6{
+        z-index : 150;
+        width: 100px;
+        top : 50px; left : 700px;
+    }
+    .btn_class{
+        z-index : 300;
+        position: absolute;
+        width: 200px;
+        height: 70px;
+        top : 90% ; left : 45%;
+        background-color: orange;
+        border-color: orange;
+    }
+}
+/*////// CREATION DU BUTTON /////*/
+
+.classHide{
+    display : none;
+}
+.cacher{
+    visibility: hidden;
+}
+
+@media screen and (orientation:landscape) {
+    /* Règles CSS pour une tablette ou un smartphone tenu horizontalement */
+}
+@media print and (max-width:21cm) {
+    /* Règles CSS pour une une impression sur une largeur de 21cm maximum */
+}
+@media not print {
+    /* Règles CSS pour tous les périphériques sauf les imprimantes */
+}
+
+#photoHalloween, #photoHalloween2{
+    z-index : 2;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*
+#divSite2, #divSite, #divCV {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 0;
+    border: none;
+    margin: 10px auto;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    float: left;
+    background: #1B2631;
+    color: white;
+    transition: 0.2s;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#divSite:hover, #divSite2:hover, #divCV:hover{
+    background: #E74C3C;
+    color: white;
+} */
+/*///////////////////////////////////////////////////*/
+/*////////////////administrateur/////////////////////*/
+/*
+.divAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+*/
+/*//////////////inscription///////////////////////*/
+/*
+#formProfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#formProfil>input,button{
+    display: block;
+}
+
+#formProfil>input{
+    float: left;
+}
+
+*/
+
+

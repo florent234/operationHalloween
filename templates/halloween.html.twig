@@ -1,0 +1,50 @@
+{% extends 'layout.html.twig'%}
+
+
+{%  block body %}
+
+<h1>{{ date }}</h1>
+    <script type="text/javascript">
+        function ani($id){
+            if($id === 'fantome1'){
+                document.getElementById('fantome1').className ='classGagnant2';
+            }
+            if($id === 'fantome2'){
+                document.getElementById('fantome2').className ='classGagnant1';
+            }
+            if($id === 'fantome3'){
+                document.getElementById('fantome3').className ='classGagnant3';
+            }
+            if($id === 'fantome4'){
+                document.getElementById('fantome4').className ='classGagnant4';
+            }
+            if($id === 'fantome5'){
+                document.getElementById('fantome5').className ='classGagnant5';
+            }
+            if($id === 'fantome6'){
+                document.getElementById('fantome6').className ='classGagnant6';
+            }
+            /*    BOUTON DE RETOUR    */
+            document.getElementById('id_button').className = "btn_class";
+        }
+    </script>
+
+    <div id="divAccueilPhone">
+        <img id="fantome1" onclick="ani('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
+        <img id="fantome2" onclick="ani('fantome2')" class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+    </div>
+
+    <div id="divAccueilTablette">
+        <img id="fantome3" onclick="ani('fantome3')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
+        <img id="fantome4" onclick="ani('fantome4')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+    </div>
+    <div id="divAccueilOrdi">
+        <img id="fantome5" onclick="ani('fantome5')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
+        <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+    </div>
+    <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+
+
+
+{% endblock %}
+{% block title %}Jeux{% endblock %}
