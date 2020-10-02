@@ -27,7 +27,6 @@ class ClientsType extends AbstractType
             ->add('nom', TextType::class, ['label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('telephone', TextType::class, ['label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('rgpdCentreCo', CheckboxType::class, ['label' => 'J’accepte de recevoir les actualités et les offres du centre commercial Aushopping Villebon 2 :', 'required' => false])
             ->add('rgpdPanel', CheckboxType::class, ['label' => 'J’accepte de participer au panel de consommateurs Coclicco :', 'required' => false])
             ;
 

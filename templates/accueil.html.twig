@@ -4,37 +4,16 @@
     <!--Parti uniquement visible sur tablette et ordinateur -->
 
     <!-- ////////////////////////  Filtre  ///////////////////////////////////-->
-<div id="divGlobale">
-    <div id="divAccueilPhone">
-        <a class="hide" href="{{ path('halloween') }}"><div id="word">
-                <div id="letters">
-                    <span class="letter">C</span>
-                    <span class="letter">L</span>
-                    <span class="letter">I</span>
-                    <span class="letter">Q</span>
-                    <span class="letter">U</span>
-                    <span class="letter">E</span>
-                    <span class="letter">Z</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">P</span>
-                    <span class="letter">O</span>
-                    <span class="letter">U</span>
-                    <span class="letter">R</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">C</span>
-                    <span class="letter">O</span>
-                    <span class="letter">M</span>
-                    <span class="letter">M</span>
-                    <span class="letter">E</span>
-                    <span class="letter">N</span>
-                    <span class="letter">C</span>
-                    <span class="letter">E</span>
-                    <span class="letter">R</span>
-                </div>
-            </div></a>    </div>
+    {% if  message  == "CLIQUEZ POUR COMMENCER" %}
 
-    <div id="divAccueilTablette">
-        <a class="hide" href="{{ path('halloween') }}"><div id="word">
+    <div id="divGlobale">
+        <div id="divAccueilPhone">
+                            {% if hotesse == true %}
+                        <a class="hide" href="{{ path('halloween') }}"><div id="word">
+                            {% else %}
+                        <a class="hide" href="{{ path('inscription') }}"><div id="word">
+                            {% endif %}
+
                     <div id="letters">
                         <span class="letter">C</span>
                         <span class="letter">L</span>
@@ -59,39 +38,77 @@
                         <span class="letter">E</span>
                         <span class="letter">R</span>
                     </div>
-            </div></a>
+                </div></a>    </div>
+
+        <div id="divAccueilTablette">
+            {% if hotesse == true %}
+            <a class="hide" href="{{ path('halloween') }}"><div id="word">
+                    {% else %}
+                    <a class="hide" href="{{ path('inscription') }}"><div id="word">
+                            {% endif %}
+                        <div id="letters">
+                            <span class="letter">C</span>
+                            <span class="letter">L</span>
+                            <span class="letter">I</span>
+                            <span class="letter">Q</span>
+                            <span class="letter">U</span>
+                            <span class="letter">E</span>
+                            <span class="letter">Z</span>
+                            <span class="cacher">-</span>
+                            <span class="letter">P</span>
+                            <span class="letter">O</span>
+                            <span class="letter">U</span>
+                            <span class="letter">R</span>
+                            <span class="cacher">-</span>
+                            <span class="letter">C</span>
+                            <span class="letter">O</span>
+                            <span class="letter">M</span>
+                            <span class="letter">M</span>
+                            <span class="letter">E</span>
+                            <span class="letter">N</span>
+                            <span class="letter">C</span>
+                            <span class="letter">E</span>
+                            <span class="letter">R</span>
+                        </div>
+                </div></a>
+        </div>
+        <div id="divAccueilOrdi">
+            {% if hotesse == true %}
+            <a class="hide" href="{{ path('halloween') }}"><div id="word">
+                    {% else %}
+                    <a class="hide" href="{{ path('inscription') }}"><div id="word">
+                            {% endif %}
+                    <div id="letters">
+                        <span class="letter">C</span>
+                        <span class="letter">L</span>
+                        <span class="letter">I</span>
+                        <span class="letter">Q</span>
+                        <span class="letter">U</span>
+                        <span class="letter">E</span>
+                        <span class="letter">Z</span>
+                        <span class="cacher">-</span>
+                        <span class="letter">P</span>
+                        <span class="letter">O</span>
+                        <span class="letter">U</span>
+                        <span class="letter">R</span>
+                        <span class="cacher">-</span>
+                        <span class="letter">C</span>
+                        <span class="letter">O</span>
+                        <span class="letter">M</span>
+                        <span class="letter">M</span>
+                        <span class="letter">E</span>
+                        <span class="letter">N</span>
+                        <span class="letter">C</span>
+                        <span class="letter">E</span>
+                        <span class="letter">R</span>
+                    </div>
+                </div></a>
+        </div>
     </div>
-    <div id="divAccueilOrdi">
-        <a class="hide" href="{{ path('halloween') }}"><div id="word">
-                <div id="letters">
-                    <span class="letter">C</span>
-                    <span class="letter">L</span>
-                    <span class="letter">I</span>
-                    <span class="letter">Q</span>
-                    <span class="letter">U</span>
-                    <span class="letter">E</span>
-                    <span class="letter">Z</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">P</span>
-                    <span class="letter">O</span>
-                    <span class="letter">U</span>
-                    <span class="letter">R</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">C</span>
-                    <span class="letter">O</span>
-                    <span class="letter">M</span>
-                    <span class="letter">M</span>
-                    <span class="letter">E</span>
-                    <span class="letter">N</span>
-                    <span class="letter">C</span>
-                    <span class="letter">E</span>
-                    <span class="letter">R</span>
-                </div>
-            </div></a>
-    </div>
+    {% else %}
+        <h3 align="center">{{ message }}</h3><br>
+        <h3 align="center">{{ date }}</h3>
 
-
-</div>
-
+    {% endif %}
 {% endblock %}
 {% block title %}Accueil{% endblock %}

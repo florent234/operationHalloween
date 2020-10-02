@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="" />
+    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/User/inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User/inscription.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +19,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -96,6 +108,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iAzNiJTSLsLVC2yG2kEOxTIkkI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -132,7 +145,7 @@
       <workItem from="1601448835531" duration="8124000" />
       <workItem from="1601469703224" duration="5406000" />
       <workItem from="1601537354476" duration="1334000" />
-      <workItem from="1601621987077" duration="12916000" />
+      <workItem from="1601621987077" duration="17292000" />
     </task>
     <servers />
   </component>
@@ -140,6 +153,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601651767138">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
+    <state x="809" y="418" key="Github.ShareDialog" timestamp="1601644685177">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state x="809" y="418" key="Github.ShareDialog/0.23.1920.983@0.23.1920.983" timestamp="1601644685177" />
+    <state x="743" y="226" key="Github.UntrackedFilesDialog" timestamp="1601644691169">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state x="743" y="226" key="Github.UntrackedFilesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601644691169" />
     <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1601628366500">
       <screen x="0" y="23" width="1920" height="983" />
     </state>

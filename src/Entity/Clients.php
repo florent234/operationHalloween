@@ -52,10 +52,7 @@ class Clients implements UserInterface
      */
     private $dateCreation;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $rgpdCentreCo;
+
 
     /**
      * @ORM\Column(type="boolean")
@@ -188,24 +185,6 @@ class Clients implements UserInterface
 
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRgpdCentreCo()
-    {
-        return $this->rgpdCentreCo;
-    }
-
-    /**
-     * @param mixed $rgpdCentreCo
-     */
-    public function setRgpdCentreCo($rgpdCentreCo)
-    {
-        $this->rgpdCentreCo = $rgpdCentreCo;
-
-        return $this;
-
-    }
 
     /**
      * @return mixed

@@ -138,6 +138,9 @@ body{
     font-size:3rem;
 }
 */
+h1{
+    z-index : 1000;
+}
 #main {
     color: white;
 }
@@ -719,7 +722,7 @@ body{
 }
 */
 /*//////////////inscription///////////////////////*/
-/*
+
 #formProfil{
     display: flex;
     flex-direction: column;
@@ -736,6 +739,6 @@ body{
     float: left;
 }
 
-*/
+
 
 
