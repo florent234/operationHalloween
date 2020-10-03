@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fondHalloween1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/corpsAccueil.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inscription.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/operationHalloween.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/operationHalloween.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/User/profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User/profil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/User/profil_afficher.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User/profil_afficher.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/User/profils.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User/profils.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav/nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/corpsAccueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/corpsAccueil.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,18 +148,37 @@
       <workItem from="1601469703224" duration="5406000" />
       <workItem from="1601537354476" duration="1334000" />
       <workItem from="1601621987077" duration="17292000" />
-      <workItem from="1601729933927" duration="3973000" />
+      <workItem from="1601729933927" duration="4552000" />
+      <workItem from="1601737875409" duration="3236000" />
+      <workItem from="1601756723987" duration="4339000" />
+      <workItem from="1601761884931" duration="1052000" />
     </task>
+    <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
+      <created>1601734594092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601734594092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601651767138">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1601734593688">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1601734593688" />
     <state x="809" y="418" key="Github.ShareDialog" timestamp="1601644685177">
       <screen x="0" y="23" width="1920" height="983" />
     </state>

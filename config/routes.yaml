@@ -1,3 +1,10 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+#halloween:
+#  path: /halloween/{$id}
+#  controller: App\Controller\HomeController::halloween
+#  defaults:
+#    id: 1
+#  requirements:
+#    id: '\d+'

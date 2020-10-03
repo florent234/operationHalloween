@@ -15,29 +15,25 @@ class ClientsController extends AbstractController
 {
 
     /**
-     * @Route("/clients/inscription", name="clients_inscription");
+     * @Route("/inscription", name="inscription")
      */
-    public function inscription(EntityManagerInterface $em,
-                                Request $request){
-
-        $utilisateur = new Clients();
-        $utilisateur->setDateCreation(new \DateTime());
-
-        $formInscription = $this->createForm(ClientsType::class, $utilisateur);
-
+    public function inscripton(EntityManagerInterface $em,
+                               Request $request)
+    {
+        $client = new Clients();
+        $client->setDateCreation(new \DateTime());
+        $formInscription = $this->createForm(ClientsType::class, $client);
         $formInscription->handleRequest($request);
 
         if( $formInscription->isSubmitted() && $formInscription->isValid()){
-
-            $em->persist($utilisateur);
+            $em->persist($client);
             $em->flush();
-
-           // return $this->redirectToRoute('home',['id'=>$utilisateur->getId(), "utilisateur"=>$utilisateur]);
-            return $this->redirectToRoute('bonAchats',[]);
+          //  return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
+            return $this->redirectToRoute('halloween');
 
         }
 
-        return $this->render('jeuxConcours/inscription.html.twig',
+        return $this->render('inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }
 

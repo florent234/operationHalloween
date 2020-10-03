@@ -18,6 +18,7 @@ class HomeController extends AbstractController
      */
     public function home()
     {
+
         $ferme = "Le jeux est fermé, revenez plus tard";
         $ouvert = "CLIQUEZ POUR COMMENCER";
 
@@ -40,43 +41,37 @@ class HomeController extends AbstractController
         $heure = date ("H:i");
         $hotesse = false;
         if (date("00:00")<$heure){
-            if($heure<date("24:00")){
+            if($heure<date("23:59")){
                 $hotesse = true;
             }
         }
 
 
         return $this->render('accueil.html.twig',
-            ["message"=>$message, "date"=>$today, "hotesse"=>$hotesse]);
+            ["message"=>$message, "date"=>$today, "hotesse"=>$hotesse, "null"=>1]);
     }
+
     /**
      * @Route("/halloween", name="halloween")
      */
     public function halloween()
     {
+        // A faire un suivi entre inscription et l'arrivé sur halloween
+
 
         return $this->render('halloween.html.twig',
             []);
     }
-    /**
-     * @Route("/inscription", name="inscription")
-     */
-    public function inscripton(EntityManagerInterface $em,
-                               Request $request)
+/* /**
+     * ("/halloween/{$id}", name="halloween", requirements={"id": "\d+" })
+     *
+    public function halloween(int $id)
     {
-        $client = new Clients();
-        $client->setDateCreation(new \DateTime());
-        $formInscription = $this->createForm(ClientsType::class, $client);
-        $formInscription->handleRequest($request);
+        // A faire un suivi entre inscription et l'arrivé sur halloween
 
-        if( $formInscription->isSubmitted() && $formInscription->isValid()){
-            $em->persist($client);
-            $em->flush();
-            return $this->redirectToRoute('halloween',[]);
-        }
 
-        return $this->render('inscription.html.twig',
-            ["formInscription"=>$formInscription->createView()]);
-    }
+        return $this->render('halloween.html.twig',
+            ["id"=>$id]);
+    }*/
 
 }

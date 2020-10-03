@@ -4,6 +4,14 @@
     color: white;
     font-size: 20px;
 }
+/*   sup surlignemen a */
+#divGlobale a:link
+{
+    text-decoration:none;
+}
+#divGlobale {
+    font-family: Luminari, fantasy;
+}
 h1{
     z-index : 1000;
 }
@@ -11,20 +19,21 @@ h1{
     color: white;
 }
 #letters {
-    margin : 0 auto;
     width : 100%;
-    display: flex;
+    display: inline-flex;
     color: white;
-    text-shadow: 0 0 5px dimgrey, 0 0 10px black;
     opacity : 90%;
+    margin : 0 auto;
 }
 
 .letter {
+    text-shadow: 0 0 5px dimgrey, 0 0 10px black;
+    font-size: 0.50em;
     animation-name: right;
     animation-fill-mode: forwards;
-    animation-duration: 6s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-delay: 5s;
+    animation-delay: 3s;
     animation-timing-function: linear;
 }
 .letter2{
@@ -32,32 +41,32 @@ h1{
     animation-fill-mode: forwards;
     animation-duration: 3s;
     animation-iteration-count: 1;
-    animation-delay: 5s;
+    animation-delay: 2s;
     animation-timing-function: linear;
 }
 .letter:nth-child(2){
-    animation-delay: 5.3s;
+    animation-delay: 3.3s;
 }
 .letter:nth-child(3){
-    animation-delay: 5.4s;
+    animation-delay: 3.3s;
 }
 .letter:nth-child(4){
-    animation-delay: 5.2s;
+    animation-delay: 3.2s;
 }
 .letter:nth-child(5){
-    animation-delay: 5.1s;
+    animation-delay: 3.1s;
 }
 .letter:nth-child(6){
-    animation-delay: 5.2s;
+    animation-delay: 3.2s;
 }
 .letter:nth-child(7){
-    animation-delay: 5.3s;
+    animation-delay: 3.3s;
 }
 .letter:nth-child(8){
-    animation-delay: 5.1s;
+    animation-delay: 3.1s;
 }
 .letter:nth-child(9){
-    animation-delay: 5.5s;
+    animation-delay: 3.5s;
 }
 @keyframes up {
     0% {
@@ -84,28 +93,33 @@ h1{
     0%{
         transform: translate(0,0) skew(0);
     }
-    20% {
-        transform: translate(0,0) skew(0);
-    }
-    30% {
+    5% {
         transform: translate(40%, 0) skew(-5deg);
     }
-    40% {
+    10% {
         transform: translate(80% , 0) skew(8deg);
     }
-    50% {
+    15% {
         transform: translate(120% ,0) skew(-7deg);
     }
-    60% {
+    20% {
         transform: translate(160%, 0) skew(4deg);
     }
-    70% {
+    25% {
         transform: translate(200%, 0) skew(0);
         opacity: 0;
     }
-    100% {
-        transform: translate(200%, 0) skew(0);
+    30%{
+        transform: translate(0, 0) skew(0);
         opacity: 0;
+    }
+    31%{
+        transform: translate(0, 0) skew(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0) skew(0);
+        opacity: 1;
     }
 }
 
@@ -183,11 +197,11 @@ h1{
         width:30%;
     }
     50%{
-        transform: translate(-160px, 0px) rotate(360deg);
+        transform: translate(7%, -15%) rotate(180deg);
         width:50%;
     }
     100%{
-        transform: translate(-180px, 0px) rotate(360deg);
+        transform: translate(15%, -30%) rotate(360deg);
         width:80%;
     }
 }
@@ -205,11 +219,11 @@ h1{
         width:30%;
     }
     50%{
-        transform: translate(12%, -100px) rotate(360deg);
+        transform: translate(-50%, 5%) rotate(360deg);
         width:50%;
     }
     100%{
-        transform: translate(12%, -200px) rotate(360deg);
+        transform: translate(-50%, 10%) rotate(360deg);
         width:80%;
     }
 }
@@ -217,7 +231,7 @@ h1{
 
 /*                   TELEPHONE        */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:900px)  {
 
     #letters {
         margin-top: 50%;
@@ -260,21 +274,19 @@ h1{
     }
 
     #fantome1{
-        z-index : 150;
         width: 30%;
-        top : 350px; left : 0;
+        top : 40%; left : 0;
     }
     #fantome2{
-        z-index : 150;
         width: 30%;
-        top : 50px; left : 200px;
+        top : 5%; left : 50%;
     }
     .btn_class{
         z-index : 300;
         position: absolute;
-        width: 150px;
-        height: 40px;
-        top : 90% ; left : 35%;
+        width: 30%;
+        height: 5%;
+        top : 90% ; left : 40%;
         background-color: orange;
         border-color: orange;
     }
@@ -304,36 +316,36 @@ h1{
 }
 @keyframes avancer3{
     0%{
-        width:30%;
+        width:10%;
         opacity: 0;
     }
     50%{
-        transform: translate(150px, -500px) rotate(180deg);
-        width:50%;
+        transform: translate(50%, -70%) rotate(180deg);
+        width:20%;
         z-index: 300;
         opacity : 0.3;
     }
     100%{
-        transform: translate(150px, -500px) rotate(360deg);
-        width:70%;
+        transform: translate(100%, -60%) rotate(360deg);
+        width:30%;
         z-index: 300;
         opacity : 0.9;
     }
 }
 @keyframes avancer4{
     0%{
-        width: 100px;
+        width: 8%;
         opacity : 0;
     }
     50%{
-        transform: translate(-350px, 10%) rotate(360deg);
-        width:300px;
+        transform: translate(-60%, 0%) rotate(360deg);
+        width:20%;
         z-index: 300;
         opacity : 0.3;
     }
     100%{
-        transform: translate(-350px, 20%) rotate(360deg);
-        width:500px;
+        transform: translate(-90%, 2%) rotate(360deg);
+        width:30%;
         z-index: 300;
         opacity : 0.9;
     }
@@ -385,23 +397,24 @@ h1{
 
     #fantome3{
         z-index: 150;
-        width: 20%;
-        top: 450px;
-        left: 0;
+        width: 10%;
+        top: 60%;
+        left: 5%;
     }
 
     #fantome4 {
         z-index: 150;
-        width: 100px;
-        top: 50px;
-        left: 700px;
+        width: 8%;
+        top: 10%;
+        left: 60%;
     }
     .btn_class{
         z-index : 300;
         position: absolute;
-        width: 200px;
-        height: 70px;
-        top : 90% ; left : 40%;
+        width: 10%;
+        height: 7%;
+        font-size: 1em;
+        top : 90% ; left : 45%;
         background-color: orange;
         border-color: orange;
     }
@@ -428,36 +441,36 @@ h1{
 }
 @keyframes avancer5{
     0%{
-        width:30%;
+        width:10%;
         opacity: 0;
     }
     50%{
-        transform: translate(500px, -500px) rotate(180deg);
-        width:40%;
+        transform: translate(50%, -50%) rotate(180deg);
+        width:25%;
         z-index: 300;
         opacity : 0.3;
     }
     100%{
-        transform: translate(500px, -500px) rotate(360deg);
-        width:50%;
+        transform: translate(90%, -50%) rotate(360deg);
+        width:35%;
         z-index: 300;
         opacity : 0.9;
     }
 }
 @keyframes avancer6 {
     0% {
-        width: 100px;
+        width: 7%;
         opacity: 0;
     }
     50% {
         transform: translate(0px, 0%) rotate(360deg);
-        width: 300px;
+        width: 20%;
         z-index: 300;
         opacity: 0.3;
     }
     100% {
         transform: translate(0px, 0%) rotate(360deg);
-        width: 500px;
+        width: 30%;
         z-index: 300;
         opacity: 0.9;
     }
@@ -508,19 +521,20 @@ h1{
     }
     #fantome5{
         z-index : 150;
-        width: 150px;
-        top : 350px; left : 0;
+        width: 10%;
+        top : 40%; left : 0;
     }
     #fantome6{
         z-index : 150;
-        width: 100px;
-        top : 50px; left : 700px;
+        width: 7%;
+        top : 5%; left : 30%;
     }
     .btn_class{
         z-index : 300;
         position: absolute;
-        width: 200px;
-        height: 70px;
+        width: 10%;
+        height: 7%;
+        font-size: 2em;
         top : 90% ; left : 45%;
         background-color: orange;
         border-color: orange;
@@ -537,7 +551,70 @@ h1{
 
 @media screen and (orientation:landscape) {
     /* Règles CSS pour une tablette ou un smartphone tenu horizontalement */
+    #letters {
+        font-size: 5rem;
+    }
+    html {
+        margin:0;
+        padding:0;
+    }
+    body{
+        background: url("../photos/Halloween/fondHalloween.jpg") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    #divAccueilOrdi{
+        margin-top: 10%;
+        margin-bottom: auto;
+        height: 100%;
+        text-align: center;
+        visibility : visible;
+        display: flex;
+    }
+    #divAccueilPhone,#divAccueilTablette {
+        display: none;
+    }
+    .button_accueil{
+        z-index : 300;
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        margin: 30% auto auto;
+        vertical-align: center;
+        background-color: orange;
+        border-color: orange;
+    }
+    #fantome5{
+        z-index : 150;
+        width: 10%;
+        top : 40%; left : 0;
+    }
+    #fantome6{
+        z-index : 150;
+        width: 7%;
+        top : 5%; left : 30%;
+    }
+    .btn_class{
+        z-index : 300;
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        font-size: 0.7em;
+        top : 90% ; left : 45%;
+        background-color: orange;
+        border-color: orange;
+    }
 }
+
 @media print and (max-width:21cm) {
     /* Règles CSS pour une une impression sur une largeur de 21cm maximum */
 }
