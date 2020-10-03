@@ -27,7 +27,7 @@ class ClientsType extends AbstractType
             ->add('nom', TextType::class, ['label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('telephone', TextType::class, ['label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('rgpdPanel', CheckboxType::class, ['label' => 'J’accepte de participer au panel de consommateurs Coclicco :', 'required' => false])
+            ->add('rgpdPanel', CheckboxType::class, ['label' => 'Inscription à la Newsletter :', 'required' => false,  'label_attr' => array('id' => 'checkLabel')])
             ;
 
     }

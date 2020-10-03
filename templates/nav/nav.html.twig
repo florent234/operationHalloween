@@ -1,8 +1,4 @@
-
 <div id="nav">
-
-
-
         <a class="aMenu" href="{{ path('home') }}">Accueil</a>
         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
         <a class="aMenu" href="{{ path('logout') }}">Se Déconnecter</a><br>
@@ -10,4 +6,3 @@
         <a class="aMenu" href="{{ path('connection') }}">Se connecter</a>
         {% endif %}
 </div>
-

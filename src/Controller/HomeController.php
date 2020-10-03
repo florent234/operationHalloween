@@ -24,7 +24,7 @@ class HomeController extends AbstractController
 
         $today = date("Y-m-d H:i"); // ATTENTION 2 heure de moins ...
         $dateDebut = date("2020-10-02 08:30");
-        $dateFin = date("2020-10-03 18:30");
+        $dateFin = date("2020-10-27 18:30");
         if ($dateDebut<$today){
             if($today<$dateFin){
                 $message = $ouvert;
@@ -39,8 +39,8 @@ class HomeController extends AbstractController
         // POUR l'instant toutes les après midi de 14h à 18h
         $heure = date ("H:i");
         $hotesse = false;
-        if (date("14:00")<$heure){
-            if($heure<date("15:00")){
+        if (date("00:00")<$heure){
+            if($heure<date("24:00")){
                 $hotesse = true;
             }
         }
@@ -75,7 +75,7 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('halloween',[]);
         }
 
-        return $this->render('User/inscription.html.twig',
+        return $this->render('inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }
 

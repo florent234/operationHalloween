@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Photo;
-use App\Entity\Sortie;
 use App\Entity\User;
 use App\Form\InscriptionType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="inscription");
+     * @Route("/inscription_utilisateur", name="inscription_user");
      */
     public function inscription(EntityManagerInterface $em,
                                 Request $request,
