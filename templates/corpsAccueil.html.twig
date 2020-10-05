@@ -1,37 +1,33 @@
- {% if hotesse == true %}
-         <!--  <a class="hide" href="{ ('halloween', {'id':null} ) }}"> -->
-            <a class="hide" href="{{ path('halloween') }}">
+                 {% if hotesse == true %}
+            <a class="hide" id="lien" href="{{  path('halloween', {'id': 1}) }}"
                  {% else %}
-            <a class="hide" href="{{ path('inscription') }}">
-                {% endif %}
-            <div id="word">
-                <div id="letters">
-                    <span class="letter">C</span>
-                    <span class="letter">L</span>
-                    <span class="letter">I</span>
-                    <span class="letter">Q</span>
-                    <span class="letter">U</span>
-                    <span class="letter">E</span>
-                    <span class="letter">Z</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">P</span>
-                    <span class="letter">O</span>
-                    <span class="letter">U</span>
-                    <span class="letter">R</span>
-                    <span class="cacher">-</span>
-                    <span class="letter">C</span>
-                    <span class="letter">O</span>
-                    <span class="letter">M</span>
-                    <span class="letter">M</span>
-                    <span class="letter">E</span>
-                    <span class="letter">N</span>
-                    <span class="letter">C</span>
-                    <span class="letter">E</span>
-                    <span class="letter">R</span>
+            <a class="hide" i="lien2" href="{{ path('inscription') }}">
+                 {% endif %}
+                <div id="word">
+                    <div id="letters">
+                        <span class="letter">C</span>
+                        <span class="letter">L</span>
+                        <span class="letter">I</span>
+                        <span class="letter">Q</span>
+                        <span class="letter">U</span>
+                        <span class="letter">E</span>
+                        <span class="letter">Z</span>
+                        <span class="cacher">-</span>
+                        <span class="letter">P</span>
+                        <span class="letter">O</span>
+                        <span class="letter">U</span>
+                        <span class="letter">R</span>
+                        <span class="cacher">-</span>
+                        <span class="letter">C</span>
+                        <span class="letter">O</span>
+                        <span class="letter">M</span>
+                        <span class="letter">M</span>
+                        <span class="letter">E</span>
+                        <span class="letter">N</span>
+                        <span class="letter">C</span>
+                        <span class="letter">E</span>
+                        <span class="letter">R</span>
+                    </div>
                 </div>
-            </div>
-            {% if hotesse == true %}
-                </a>
-            {% else %}
-                </a>
-            {% endif %}
+            </a>
+

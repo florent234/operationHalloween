@@ -1,6 +1,5 @@
 {% extends 'layout.html.twig'%}
 
-
 {%  block body %}
     <script type="text/javascript">
         function ani($idFantome){
@@ -22,9 +21,24 @@
             if($idFantome === 'fantome6'){
                 document.getElementById('fantome6').className ='classGagnant6';
             }
-            /*    BOUTON DE RETOUR    */
-            document.getElementById('id_button').className = "btn_class";
+            /*    BOUTON DE RETOUR   s'affiche après 10 sec  */
+            /*affichage du message de tirage au sort après 10 sec */
+            myFunction();
+            function myFunction() {
+                setInterval(function(){
+                    document.getElementById('id_button').className = "btn_class";
+                    document.getElementById('resultatTirage').className = "";
+                    document.getElementById('divResultat2').className = "";}, 2000);
+            }
+            // redirection vers la page d'accueil après 10 seconde
+            retour();
+            function retour() {
+                setInterval(function(){
+                    window.location.href = '{{ path('home') }}';
+                    }, 10000);
+            }
         }
+
     </script>
 
     <div id="divAccueilPhone">
@@ -41,7 +55,11 @@
         <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
     </div>
     <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+    {% if id==1 %}
 
+    {% else %}
+<div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
+    {% endif %}
 
 
 {% endblock %}

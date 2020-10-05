@@ -8,10 +8,6 @@
         </div>
         <div class="formProfil form-inline">
             {{ form_start(formInscription) }}
-            {% if app.user.administrateur==0 %}
-                {{ form_widget(formInscription.administrateur, {'disabled' : true, 'attr' : { 'hidden' : true}} ) }}
-                {{ form_widget(formInscription.actif, {'disabled' : true, 'attr' : { 'hidden' : true}}) }}
-            {% endif  %}
             {{ form_widget(formInscription) }}
 
             <div id="btnProfil">

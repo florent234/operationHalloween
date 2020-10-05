@@ -7,6 +7,7 @@ use App\Form\ClientsType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -28,8 +29,8 @@ class ClientsController extends AbstractController
         if( $formInscription->isSubmitted() && $formInscription->isValid()){
             $em->persist($client);
             $em->flush();
-          //  return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
-            return $this->redirectToRoute('halloween');
+            return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
+          //  return $this->redirectToRoute('halloween');
 
         }
 
@@ -89,4 +90,6 @@ class ClientsController extends AbstractController
 
         return $this->render('User/profil_afficher.html.twig', [ "utilisateur"=>$utilisateur]);
     }
+
+
 }

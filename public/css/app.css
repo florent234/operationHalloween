@@ -5,10 +5,12 @@
     font-size: 20px;
 }
 /*   sup surlignemen a */
-#divGlobale a:link
-{
+#lien, #lien2{
     text-decoration:none;
+    font-family: Luminari, fantasy;
+
 }
+
 #divGlobale {
     font-family: Luminari, fantasy;
 }
@@ -631,7 +633,6 @@ h1{
 /*//////////////inscription///////////////////////*/
 
 #formProfil{
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -658,6 +659,19 @@ h1{
     margin :3px;
 }
 
+/*         CAS DE TIRAGE AU SORT    */
+#resultatTirage{
+    z-index : 400;
+    text-align: center;
+    vertical-align: center;
+    margin : 2% auto;
+    width : 90%;
+    color: white;
+}
+#divResultat2{
+    background-color: darkgray;
+    z-index : 400;
+}
 
 /*
 body{
