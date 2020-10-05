@@ -26,9 +26,14 @@
             myFunction();
             function myFunction() {
                 setInterval(function(){
+                    {% if id==1 %}
+                        document.getElementById('divResultat1').className = "";
+                    {% else %}
+                        document.getElementById('resultatTirage').className = "";
+                        document.getElementById('divResultat2').className = "";
+                    {% endif %}
                     document.getElementById('id_button').className = "btn_class";
-                    document.getElementById('resultatTirage').className = "";
-                    document.getElementById('divResultat2').className = "";}, 2000);
+                    }, 2000);
             }
             // redirection vers la page d'accueil après 10 seconde
             retour();
@@ -56,9 +61,9 @@
     </div>
     <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
     {% if id==1 %}
-
+        <div class="classHide"  id="divResultat1"><h2  id="resultatTirage1">{{ resultat }}</h2></div>
     {% else %}
-<div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
+        <div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
     {% endif %}
 
 

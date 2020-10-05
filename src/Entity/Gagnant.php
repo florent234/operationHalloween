@@ -2,16 +2,16 @@
 
 namespace App\Entity;
 
-use App\Repository\JoueurRepository;
+use App\Repository\GagnantRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 
 
 /**
- * @ORM\Table(name="joueur")
- * @ORM\Entity(repositoryClass=JoueurRepository::class)
+ * @ORM\Table(name="gagnant")
+ * @ORM\Entity(repositoryClass=GagnantRepository::class)
  */
-class Joueur
+class Gagnant
 {
     /**
      * @ORM\Id
@@ -26,9 +26,10 @@ class Joueur
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="boolean", length=50)
+     * @ORM\Column(type="string")
      */
-    private $resultat;
+    private $creneau;
+
 
 
     /*///////////////////// GETTER AND SETTER ////////////////////*/
@@ -39,24 +40,6 @@ class Joueur
     public function getUserId()
     {
         return $this->id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getResultat()
-    {
-        return $this->resultat;
-    }
-
-    /**
-     * @param mixed $resultat
-     */
-    public function setResultat($resultat)
-    {
-        $this->resultat = $resultat;
-
-        return $this;
     }
     /**
      * @return mixed
@@ -72,6 +55,24 @@ class Joueur
     public function setDateCreation($dateCreation)
     {
         $this->dateCreation = $dateCreation;
+
+        return $this;
+
+    }
+    /**
+     * @return mixed
+     */
+    public function getCreneau()
+    {
+        return $this->creneau;
+    }
+
+    /**
+     * @param mixed $creneau
+     */
+    public function setCreneau($creneau)
+    {
+        $this->creneau = $creneau;
 
         return $this;
 

@@ -20,7 +20,6 @@ class ClientsRepository extends ServiceEntityRepository
         parent::__construct($registry, Clients::class);
     }
 
-
     public function findByUserMail($mailSaisie)
     {
         try {

@@ -672,6 +672,19 @@ h1{
     background-color: darkgray;
     z-index : 400;
 }
+/*       CAS AVEC HOTESSE       */
+#resultatTirage1{
+    z-index : 400;
+    text-align: center;
+    vertical-align: center;
+    margin : 3% auto;
+    width : 90%;
+    color: white;
+}
+#divResultat1{
+    background-color: darkgray;
+    z-index : 400;
+}
 
 /*
 body{

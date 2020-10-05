@@ -2,10 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
+use App\Repository\TirageRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Security\Core\User\UserInterface;
+
 
 
 /**
@@ -32,7 +31,7 @@ class Tirage
     /**
      * @return mixed
      */
-    public function getUserId()
+    public function getId()
     {
         return $this->id;
     }

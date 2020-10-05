@@ -4,10 +4,10 @@ namespace App\Controller;
 
 
 use App\Entity\Clients;
+use App\Entity\Gagnant;
+use App\Entity\Joueur;
 use App\Entity\Tirage;
-use App\Form\ClientsType;
 use DateTime;
-use DateTimeZone;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -53,7 +53,6 @@ class HomeController extends AbstractController
             }
         }
 
-
         return $this->render('accueil.html.twig',
             ["message"=>$message, "date"=>$today, "hotesse"=>$hotesse]);
     }
@@ -62,35 +61,75 @@ class HomeController extends AbstractController
     /**
      * @Route("/halloween/{id}", name="halloween")
      */
-    public function halloween($id)
+    public function halloween($id, EntityManagerInterface $em)
     {
+        $nom = null;
+        $genre = null;
+        $resultat= null;
+        $notAllReady = true;
+        $rand=null;
         if($id==1){
-            $nom = null;
-            $genre = null;
 
             date_default_timezone_set('Europe/Paris');
 
             $heure = date ("H:i");
-            $hotesse = false;
-            if (date("14:00")<$heure){
-                if($heure<date("14:30")){
-
-                    $userRepo = $this->getDoctrine()->getRepository(Tirage::class);
-                    $tirage = $userRepo->findAll();
-
-                    $rand = rand(1, 10);
+            if (date("00:00")<$heure) {         // HEURE EN DUR
+                if ($heure < date("23:59")) {        // HEURE EN DUR
 
                     // récupérer le tableau de Tirage
+                    $userRepo = $this->getDoctrine()->getRepository(Tirage::class);
+                    $tirage = $userRepo->findAll();
                     // utiliser rand pour récupérer un numéro
+                    $rand = rand(0, 9);
+
                     // enregistrer le résultat dans Joueur
+                    $joueur = new Joueur();
+                    $joueur->setResultat($tirage[$rand]);
+                    $joueur->setDateCreation(new DateTime());
+
+                    $em->persist($joueur);
+                    $em->flush();
+
+                    // verification si pas de gagnant
+                    $userRepo = $this->getDoctrine()->getRepository(Gagnant::class);
+                    $gagnants = $userRepo->findAll();
+
+                    foreach ($gagnants as $gagnant){
+                        if($gagnant->getCreneau()=="14:00"){    // HEURE EN DUR
+                            $notAllReady=false;
+                        }
+                    }
+                    //calculer et afficher le resultat
+
+                    if ($rand === 9 and $notAllReady) {
+                        $resultat = "Vous avez GAGNÉ un bon d'achat de 20€";
+
+                        $gagnant = new Gagnant();
+                        $gagnant->setCreneau("14:00");   // HEURE EN DUR
+                        $gagnant->setDateCreation(new DateTime());
+
+                        $em->persist($gagnant);
+                        $em->flush();
+                    } else {
+                        $resultat = "PERDU";
+                    }
+
                     // Ajouter condition en fin de demi-heure
 
+                 /*   if ($heure < date("23:59")) {       // HEURE EN DUR
+                        $userRepo = $this->getDoctrine()->getRepository(Joueur::class);
+                        $joueurs = $userRepo->findAll();
+                        foreach ($joueurs as $joueur){
+                            if ("23:30" < $joueur->getDateCreation()->format('H:i')) {    // HEURE EN DUR
+                                if($joueur->getDateCreation()->format('H:i')<"23:59"){     // HEURE EN DUR
+                                   if($joueur->getResultat()==false){
+                                       $compteur=1;
+                                   }
+                                }
+                            }
+                        }
 
-
-
-
-
-
+                    }*/
                 }
             }
         } else {
@@ -103,12 +142,11 @@ class HomeController extends AbstractController
             } else {
                 $genre="Monsieur";
             }
-
-
         }
 
         return $this->render('halloween.html.twig',
-            ["id"=>$id, "nom"=>$nom, "genre"=>$genre, "heure"=>$heure
+            ["id"=>$id, "nom"=>$nom, "genre"=>$genre, "heure"=>$heure, "resultat"=>$resultat
+                , "rand"=>$rand , "tirages"=>$tirage
             ]);
     }
 }
