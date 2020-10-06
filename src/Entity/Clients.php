@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @UniqueEntity(fields={"email"})
+ * @UniqueEntity(fields={"telephone"})
  * @ORM\Table(name="clients")
  * @ORM\Entity(repositoryClass=ClientsRepository::class)
  */

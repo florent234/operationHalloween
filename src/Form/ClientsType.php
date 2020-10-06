@@ -23,8 +23,8 @@ class ClientsType extends AbstractType
                 'Madame' => true,
                 'Monsieur' => false,
             ],])
-            ->add('prenom', TextType::class, ['label' => 'Prenom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('nom', TextType::class, ['label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('prenom', TextType::class, ['label' => 'Prenom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('telephone', TextType::class, ['label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('rgpdPanel', CheckboxType::class, ['label' => 'Inscription à la Newsletter :','required' => false,  'label_attr' => array('id' => 'checkLabel', "default" =>false)])

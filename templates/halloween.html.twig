@@ -39,7 +39,9 @@
             retour();
             function retour() {
                 setInterval(function(){
-                    window.location.href = '{{ path('home') }}';
+                    {% if id==1 %}
+                    window.location.href = '{{ path('accueilHalloween') }}';
+                    {% endif %}
                     }, 10000);
             }
         }
@@ -59,7 +61,12 @@
         <img id="fantome5" onclick="ani('fantome5')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
         <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
     </div>
-    <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+    {% if id==1 %}
+        <a href="{{ path('accueilHalloween') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+    {% else %}
+        <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+    {% endif %}
+
     {% if id==1 %}
         <div class="classHide"  id="divResultat1"><h2  id="resultatTirage1">{{ resultat }}</h2></div>
     {% else %}
