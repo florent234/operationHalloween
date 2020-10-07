@@ -1,7 +1,9 @@
-                 {% if hotesse == true %}
-            <a class="hide" id="lien" href="{{  path('jeuxHalloween') }}"
+
+            <a class="hide" id="lien"
+                {% if hotesse == true %}
+                     href="{{  path('inscriptions') }}">
                  {% else %}
-            <a class="hide" i="lien2" href="{{ path('inscription') }}">
+                     href="{{ path('inscription') }}">
                  {% endif %}
                 <div id="word">
                     <div id="letters">

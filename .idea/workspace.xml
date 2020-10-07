@@ -19,14 +19,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="fin de journee de mardi">
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_LARGE_1920x1980px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_ORDI_800x600px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/FORMAT_MOBILE_1125X2436px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/PERDU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome4-04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome4-05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/Halloween/fantome_fantome5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/BODY_MINUTE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/CACHE_CACHE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/CENTRAKOR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/DENEUVILLE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/FABIO_SALSA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/FRANCK_P.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/GRAIN_DEMALICE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/HEXA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/LANDREAU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/LYNX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/MAISONS_MONDE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/MICRO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/NOCIBE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/NOELIE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/OLIPHIL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/PERDU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/TAPEALOEIL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/bon_achat/VISUAL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Gagnant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Gagnant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/corpsAccueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/corpsAccueil.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inscription.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,20 +166,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/src/Entity" />
       <recent name="$PROJECT_DIR$/public/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/photos/bon_achat" />
       <recent name="$PROJECT_DIR$/public/photos/Halloween" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,7 +201,20 @@
       <workItem from="1601893464693" duration="319000" />
       <workItem from="1601893814691" duration="1500000" />
       <workItem from="1601896993071" duration="8983000" />
+      <workItem from="1602053980853" duration="1017000" />
+      <workItem from="1602055514408" duration="9204000" />
+      <workItem from="1602066068983" duration="3181000" />
+      <workItem from="1602073070389" duration="7844000" />
+      <workItem from="1602082831701" duration="1989000" />
     </task>
+    <task id="LOCAL-00001" summary="fin de journee de mardi">
+      <created>1601998480938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601998480938</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +231,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fin de journee de mardi" />
+    <option name="LAST_COMMIT_MESSAGE" value="fin de journee de mardi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="704" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601894820307">
@@ -212,6 +261,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="743" y="226" key="Github.UntrackedFilesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601644691169" />
+    <state x="560" y="254" key="Vcs.Push.Dialog.v2" timestamp="1601998487436">
+      <screen x="0" y="23" width="1920" height="989" />
+    </state>
+    <state x="560" y="254" key="Vcs.Push.Dialog.v2/0.23.1920.989@0.23.1920.989" timestamp="1601998487436" />
     <state x="773" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601967589824">
       <screen x="0" y="23" width="1920" height="983" />
     </state>

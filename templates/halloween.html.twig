@@ -15,63 +15,58 @@
             if($idFantome === 'fantome4'){
                 document.getElementById('fantome4').className ='classGagnant4';
             }
+            if($idFantome === 'fantome3b'){
+                document.getElementById('fantome3b').className ='classGagnant3b';
+            }
+            if($idFantome === 'fantome4b'){
+                document.getElementById('fantome4b').className ='classGagnant4b';
+            }
             if($idFantome === 'fantome5'){
                 document.getElementById('fantome5').className ='classGagnant5';
             }
             if($idFantome === 'fantome6'){
                 document.getElementById('fantome6').className ='classGagnant6';
             }
+            if($idFantome === 'fantome5b'){
+                document.getElementById('fantome5b').className ='classGagnant5b';
+            }
+            if($idFantome === 'fantome6b'){
+                document.getElementById('fantome6b').className ='classGagnant6b';
+            }
             /*    BOUTON DE RETOUR   s'affiche après 10 sec  */
             /*affichage du message de tirage au sort après 10 sec */
             myFunction();
             function myFunction() {
                 setInterval(function(){
-                    {% if id==1 %}
-                        document.getElementById('divResultat1').className = "";
-                    {% else %}
-                        document.getElementById('resultatTirage').className = "";
-                        document.getElementById('divResultat2').className = "";
-                    {% endif %}
+                    document.getElementById('resultatTirage').className = "";
+                    document.getElementById('divResultat2').className = "";
+
                     document.getElementById('id_button').className = "btn_class";
                     }, 2000);
-            }
-            // redirection vers la page d'accueil après 10 seconde
-            retour();
-            function retour() {
-                setInterval(function(){
-                    {% if id==1 %}
-                    window.location.href = '{{ path('accueilHalloween') }}';
-                    {% endif %}
-                    }, 10000);
             }
         }
 
     </script>
 
     <div id="divAccueilPhone">
-        <img id="fantome1" onclick="ani('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
-        <img id="fantome2" onclick="ani('fantome2')" class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+        <img id="fantome1" onclick="ani('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome2" onclick="ani('fantome2')" class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
     </div>
 
     <div id="divAccueilTablette">
-        <img id="fantome3" onclick="ani('fantome3')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
-        <img id="fantome4" onclick="ani('fantome4')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+        <img id="fantome3" onclick="ani('fantome3')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome4" onclick="ani('fantome4')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
+        <img id="fantome3b" onclick="ani('fantome3b')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome4-05.png') }}" alt="">
+        <img id="fantome4b" onclick="ani('fantome4b')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome3.png') }}" alt="">
     </div>
     <div id="divAccueilOrdi">
-        <img id="fantome5" onclick="ani('fantome5')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome2.png') }}" alt="">
-        <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome3.png') }}" alt="">
+        <img id="fantome5" onclick="ani('fantome5')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
+        <img id="fantome5b" onclick="ani('fantome5b')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome4-05.png') }}" alt="">
+        <img id="fantome6b" onclick="ani('fantome6b')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome3.png') }}" alt="">
     </div>
-    {% if id==1 %}
-        <a href="{{ path('accueilHalloween') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
-    {% else %}
-        <a href="{{ path('home') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
-    {% endif %}
 
-    {% if id==1 %}
-        <div class="classHide"  id="divResultat1"><h2  id="resultatTirage1">{{ resultat }}</h2></div>
-    {% else %}
         <div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
-    {% endif %}
 
 
 {% endblock %}

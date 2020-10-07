@@ -129,7 +129,7 @@ class HomeController extends AbstractController
     public function jeuxHalloween(EntityManagerInterface $em )
     {
         $heure=null;
-        $resultat ="null";
+        $resultat ="Le jeux est ouvert le 24, 28, 30 et 31 octobre de 14h à 18h, à bientôt";
         $tirage=null;
         $rand =null;
 
@@ -137,53 +137,67 @@ class HomeController extends AbstractController
         $today = date("Y-m-d");
         $heure = date ("H");
         $min = date ("i");
-
-        $resultat = HomeController::mecanique(new \DateTime('11:00'), new \DateTime('14:30'),$em );    //////// JUSTE POUR TESTER ///////////
-
-        if($today=="2020-10-24" || $today=="2020-10-31"){
-            switch($heure){
-                case $heure == 14 & 00<=$min & $min<30 : $resultat = HomeController::mecanique( new \DateTime('14:00'), new \DateTime("14:30"),$em ); break;
-                case $heure ==14 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new \DateTime("14:30"), new \DateTime("15:00"),$em ); break;
-                case $heure ==15 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new \DateTime("15:00"), new \DateTime("15:30"),$em ); break;
-                case $heure ==15 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new \DateTime("15:30"), new \DateTime("16:00"),$em ); break;
-                case $heure == 16 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new \DateTime("16:00"), new \DateTime("16:30"),$em ); break;
-                case $heure ==16 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new \DateTime("16:30"), new \DateTime("17:00"),$em ); break;
-                case $heure == 17 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new \DateTime("17:00"), new \DateTime("17:30"),$em ); break;
-                case $heure ==17 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new \DateTime("17:30"), new \DateTime("18:00"),$em ); break;
-            }
-        }
-        if($today=="2020-10-28" || $today=="2020-10-30"){
-            switch($heure){
-                case $heure == 14 & 00<=$min & $min<34 : $resultat = HomeController::mecanique(new \DateTime("14:00"), new \DateTime("14:34"),$em ); break;
-                case $heure ==14 & 34<=$min || $heure ==15 & $min<9 : $resultat = HomeController::mecanique(new \DateTime("14:34"), new \DateTime("15:09"),$em ); break;
-                case $heure ==15 & 9<=$min & $min<43 : $resultat = HomeController::mecanique(new \DateTime("15:09"), new \DateTime("15:43"),$em ); break;
-                case $heure ==15 & 43<=$min || $heure ==16 & $min<17 : $resultat = HomeController::mecanique(new \DateTime("15:43"), new \DateTime("16:17"),$em ); break;
-                case $heure == 16 & 17<=$min & $min<51 : $resultat = HomeController::mecanique(new \DateTime("16:17"), new \DateTime("16:51"),$em ); break;
-                case $heure ==16 & 51<=$min || $heure ==17 & $min<26 : $resultat = HomeController::mecanique(new \DateTime("16:51"), new \DateTime("17:26"),$em ); break;
-                case $heure == 17 & 26<=$min & $min<=60 : $resultat = HomeController::mecanique(new \DateTime("17:26"), new \DateTime("18:00"),$em ); break;
-            }
+        if($heure == 17 & 00<=$min & $min<59){
+            $resultat = HomeController::mecanique(new DateTime('12:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
         }
 
-        return $this->render('halloween.html.twig',
+        if($today=="2020-10-24"){
+            switch($heure){
+                case $heure == 14 & 00<=$min & $min<30 : $resultat = HomeController::mecanique( new DateTime('14:00'), new DateTime("14:30"), "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
+                case $heure ==14 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("14:30"), new DateTime("15:00"), "photos/bon_achat/CENTRAKOR.png",$em ); break;
+                case $heure ==15 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("15:00"), new DateTime("15:30"), "photos/bon_achat/NOELIE.png",$em ); break;
+                case $heure ==15 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("15:30"), new DateTime("16:00"), "photos/bon_achat/MICRO.png",$em ); break;
+                case $heure == 16 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("16:00"), new DateTime("16:30"), "photos/bon_achat/LYNX.png",$em ); break;
+                case $heure ==16 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("16:30"), new DateTime("17:00"), "photos/bon_achat/NOCIBE.png",$em ); break;
+                case $heure == 17 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("17:00"), new DateTime("17:30"), "photos/bon_achat/TAPEALOEIL.png",$em ); break;
+                case $heure ==17 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("17:30"), new DateTime("18:00"), "photos/bon_achat/CACHE_CACHE.png",$em ); break;
+            }
+        }
+        if($today=="2020-10-31"){
+            switch($heure){
+                case $heure == 14 & 00<=$min & $min<30 : $resultat = HomeController::mecanique( new DateTime('14:00'), new DateTime("14:30"), "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
+                case $heure ==14 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("14:30"), new DateTime("15:00"), "photos/bon_achat/CENTRAKOR.png",$em ); break;
+            case $heure ==15 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("15:00"), new DateTime("15:30"), "photos/bon_achat/FRANCK_P.png",$em ); break;
+                case $heure ==15 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("15:30"), new DateTime("16:00"), "photos/bon_achat/MICRO.png",$em ); break;
+                case $heure == 16 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("16:00"), new DateTime("16:30"), "photos/bon_achat/HEXA.png",$em ); break;
+                case $heure ==16 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("16:30"), new DateTime("17:00"), "photos/bon_achat/NOELIE.png",$em ); break;
+                case $heure == 17 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("17:00"), new DateTime("17:30"), "photos/bon_achat/BODY_MINUTE.png",$em ); break;
+                case $heure ==17 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("17:30"), new DateTime("18:00"), "photos/bon_achat/OLIPHIL.png",$em ); break;
+            }
+        }
+        if($today=="2020-10-28"){
+            switch($heure){
+                case $heure == 14 & 00<=$min & $min<34 : $resultat = HomeController::mecanique(new DateTime("14:00"), new DateTime("14:34"), "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
+                case $heure ==14 & 34<=$min || $heure ==15 & $min<9 : $resultat = HomeController::mecanique(new DateTime("14:34"), new DateTime("15:09"), "photos/bon_achat/OLIPHIL.png",$em ); break;
+                case $heure ==15 & 9<=$min & $min<43 : $resultat = HomeController::mecanique(new DateTime("15:09"), new DateTime("15:43"), "photos/bon_achat/LANDREAU.png",$em ); break;
+                case $heure ==15 & 43<=$min || $heure ==16 & $min<17 : $resultat = HomeController::mecanique(new DateTime("15:43"), new DateTime("16:17") , "photos/bon_achat/GRAIN_DEMALICE.png",$em ); break;
+                case $heure == 16 & 17<=$min & $min<51 : $resultat = HomeController::mecanique(new DateTime("16:17"), new DateTime("16:51"), "photos/bon_achat/DENEUVILLE.png",$em ); break;
+                case $heure ==16 & 51<=$min || $heure ==17 & $min<26 : $resultat = HomeController::mecanique(new DateTime("16:51"), new DateTime("17:26"), "photos/bon_achat/FABIO_SALSA.png",$em ); break;
+                case $heure == 17 & 26<=$min & $min<=60 : $resultat = HomeController::mecanique(new DateTime("17:26"), new DateTime("18:00"), "photos/bon_achat/NOCIBE.png",$em ); break;
+            }
+        }
+        if($today=="2020-10-30"){
+            switch($heure){
+                case $heure == 14 & 00<=$min & $min<34 : $resultat = HomeController::mecanique(new DateTime("14:00"), new DateTime("14:34"), "photos/bon_achat/BODY_MINUTE.png",$em ); break;
+                case $heure ==14 & 34<=$min || $heure ==15 & $min<9 : $resultat = HomeController::mecanique(new DateTime("14:34"), new DateTime("15:09"), "photos/bon_achat/LANDREAU.png",$em ); break;
+                case $heure ==15 & 9<=$min & $min<43 : $resultat = HomeController::mecanique(new DateTime("15:09"), new DateTime("15:43"), "photos/bon_achat/CACHE_CACHE.png",$em ); break;
+                case $heure ==15 & 43<=$min || $heure ==16 & $min<17 : $resultat = HomeController::mecanique(new DateTime("15:43"), new DateTime("16:17") , "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
+                case $heure == 16 & 17<=$min & $min<51 : $resultat = HomeController::mecanique(new DateTime("16:17"), new DateTime("16:51"), "photos/bon_achat/NOCIBE.png",$em ); break;
+                case $heure ==16 & 51<=$min || $heure ==17 & $min<26 : $resultat = HomeController::mecanique(new DateTime("16:51"), new DateTime("17:26"), "photos/bon_achat/VISUAL.png",$em ); break;
+                case $heure == 17 & 26<=$min & $min<=60 : $resultat = HomeController::mecanique(new DateTime("17:26"), new DateTime("18:00"), "photos/bon_achat/GRAIN_DEMALICE.png",$em ); break;
+            }
+        }
+     //   $resultat = "photos/bon_achat/BODY_MINUTE.png";
+
+
+        return $this->render('halloween2.html.twig',
             ["id"=>1,"heure"=>$heure, "resultat"=>$resultat
                 , "rand"=>$rand , "tirages"=>$tirage
             ]);
     }
-    public function mecanique(DateTime $heureDepart, DateTime $heureArrive,  $em) : string{
+    public function mecanique(DateTime $heureDepart, DateTime $heureArrive, String $bonAchat,  $em) : string{
         $notAllReady = true;
         $rand=null;
-
-
-        $now = new \DateTime("now");
-
-
-        $diff = $heureArrive->diff($now);
-        $nb_jours = $diff->d;
-
-
-
-
-
 
         date_default_timezone_set('Europe/Paris');
 
@@ -196,11 +210,11 @@ class HomeController extends AbstractController
         $gagnants = $userRepo->findAll();
 
         foreach ($gagnants as $gagnant){
-            if($gagnant->getCreneau()==$heureDepart){    // HEURE EN DUR
+            if($gagnant->getCreneau()==$heureDepart){
                 $notAllReady=false;
             }
         }
-        // CAS OU IL N Y A PAS DE GAGNANT SUR LE CRENEAU HORRAIRE
+        // CAS OU IL N Y A PAS DE GAGNANT ENCORE SUR LE CRENEAU HORRAIRE
         if ($notAllReady) {
             // utiliser rand pour récupérer un numéro
             $rand = rand(0, 9);
@@ -216,68 +230,38 @@ class HomeController extends AbstractController
             //calculer et afficher le resultat
 
             if ($rand === 9 and $notAllReady) {
-                $resultat = "Vous avez GAGNÉ un bon d'achat de 20€";
+                $resultat = $bonAchat;
 
                 $gagnant = new Gagnant();
 
-                $gagnant->setCreneau($heureDepart->format('H:i'));   // HEURE EN DUR
-                $gagnant->setDateCreation(new \DateTime());
+                $gagnant->setCreneau($heureDepart->format('H:i'));
+                $gagnant->setDateCreation(new DateTime());
 
                 $em->persist($gagnant);
                 $em->flush();
 
             } else {
-                $resultat = "PERDU 1";
+                $resultat = "photos/bon_achat/PERDU.png";
             }
 
-            $heure = date("i");
-          //  $interval = $heure->diff($heureArrive);
-          //  $interval->format('%I');
-            /*
-            $now = new DateTime('now');
-            try {
-                $dateArr = new DateTime($heureArrive);
-            } catch (\Exception $e) {
+            $now = new DateTime("now");
+
+            $diff = $now->diff($heureArrive);
+            $nb_minute = $diff->i;
+
+            if($nb_minute<5){
+                $resultat = $bonAchat;
+
+                $gagnant = new Gagnant();
+                $gagnant->setCreneau($heureDepart);
+                $gagnant->setDateCreation(new \DateTime());
+
+                $em->persist($gagnant);
+                $em->flush();
             }
-
-            $diff = $dateArr->diff($now);
-            $nb_jours = $diff->d;
-*/
-            // RAJOUTER COTE Negatif et positif !!!!!!!!!!
-            /*
-            if((int)substr($heureArrive, -2)==0 || (int)substr($heureArrive, -2)==51 || (int)substr($heureArrive, -2)==43 || (int)substr($heureArrive, -2)==34){
-                if(((int)substr($heureArrive, -2) + (int)substr($heureArrive, -1)) - $heure < 5){
-                    $resultat = "Vous avez GAGNÉ un bon d'achat de 20€";
-
-                    $gagnant = new Gagnant();
-                    $gagnant->setCreneau($heureDepart);   // HEURE EN DUR
-                    $gagnant->setDateCreation(new DateTime());
-
-                    $em->persist($gagnant);
-                    $em->flush();
-                } else {
-                    $resultat =((int)substr($heureArrive, -1) + (int)substr($heureArrive, -2)). "PERDU 3 " .$heure .$nb_jours;
-                }
-
-            } elseif ((int)substr($heureArrive, -2)==20){
-
-                if($heure - ((int)substr($heureArrive, -1) + (int)substr($heureArrive, -2))< 5){
-                    $resultat = "Vous avez GAGNÉ un bon d'achat de 20€";
-
-                    $gagnant = new Gagnant();
-                    $gagnant->setCreneau($heureDepart);   // HEURE EN DUR
-                    $gagnant->setDateCreation(new DateTime());
-
-                    $em->persist($gagnant);
-                    $em->flush();
-                } else {
-                    $resultat =((int)substr($heureArrive, -1) + (int)substr($heureArrive, -2)). "PERDU 3 " .$heure .$nb_jours;
-                }
-            }
-*/
         } else {
 
-            $resultat = "PERDU 2".$nb_jours;
+            $resultat = "photos/bon_achat/PERDU.png";
         }
         return $resultat;
     }

@@ -26,7 +26,7 @@ class Gagnant
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $creneau;
 

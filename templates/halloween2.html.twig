@@ -1,0 +1,80 @@
+{% extends 'layout.html.twig'%}
+
+{%  block body %}
+    <script type="text/javascript">
+        function ani($idFantome){
+            if($idFantome === 'fantome1'){
+                document.getElementById('fantome1').className ='classGagnant1';
+            }
+            if($idFantome === 'fantome2'){
+                document.getElementById('fantome2').className ='classGagnant2';
+            }
+            if($idFantome === 'fantome3'){
+                document.getElementById('fantome3').className ='classGagnant3';
+            }
+            if($idFantome === 'fantome4'){
+                document.getElementById('fantome4').className ='classGagnant4';
+            }
+            if($idFantome === 'fantome3b'){
+                document.getElementById('fantome3b').className ='classGagnant3b';
+            }
+            if($idFantome === 'fantome4b'){
+                document.getElementById('fantome4b').className ='classGagnant4b';
+            }
+            if($idFantome === 'fantome5'){
+                document.getElementById('fantome5').className ='classGagnant5';
+            }
+            if($idFantome === 'fantome6'){
+                document.getElementById('fantome6').className ='classGagnant6';
+            }
+            if($idFantome === 'fantome5b'){
+                document.getElementById('fantome5b').className ='classGagnant5b';
+            }
+            if($idFantome === 'fantome6b'){
+                document.getElementById('fantome6b').className ='classGagnant6b';
+            }
+            /*    BOUTON DE RETOUR   s'affiche après 10 sec  */
+            /*affichage du message de tirage au sort après 10 sec */
+            myFunction();
+            function myFunction() {
+                setInterval(function(){
+                    document.getElementById('divResultatPhoto').className = "neutre";
+                    document.getElementById('id_button').className = "btn_class";
+                    document.getElementById('imgResultat').className ="bonAchatGagnant";
+                    }, 3000);
+            }
+            // redirection vers la page d'accueil après 10 seconde
+            retour();
+            function retour() {
+                setInterval(function(){
+                    window.location.href = '{{ path('accueilHalloween') }}';
+                    }, 30000);
+            }
+        }
+
+    </script>
+
+    <div id="divAccueilPhone">
+        <img id="fantome1" onclick="ani('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome2" onclick="ani('fantome2')" class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
+    </div>
+
+    <div id="divAccueilTablette">
+        <img id="fantome3" onclick="ani('fantome3')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome4" onclick="ani('fantome4')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
+        <img id="fantome3b" onclick="ani('fantome3b')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome4-05.png') }}" alt="">
+        <img id="fantome4b" onclick="ani('fantome4b')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome3.png') }}" alt="">
+    </div>
+    <div id="divAccueilOrdi">
+        <img id="fantome5" onclick="ani('fantome5')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
+        <img id="fantome6" onclick="ani('fantome6')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
+        <img id="fantome5b" onclick="ani('fantome5b')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome4-05.png') }}" alt="">
+        <img id="fantome6b" onclick="ani('fantome6b')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome3.png') }}" alt="">
+    </div>
+        <a href="{{ path('accueilHalloween') }}" ><button id="id_button" class="classHide"  >RETOUR</button></a>
+
+        <div class="classHide"  id="divResultatPhoto"><img id="imgResultat" class="classHide" src="{{ asset( resultat ) }}" alt=""></div>
+
+
+{% endblock %}
+{% block title %}Jeux{% endblock %}

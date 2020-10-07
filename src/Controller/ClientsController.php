@@ -37,6 +37,28 @@ class ClientsController extends AbstractController
         return $this->render('inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }
+    /**
+     * @Route("/inscriptions", name="inscriptions")
+     */
+    public function inscriptons(EntityManagerInterface $em,
+                               Request $request)
+    {
+        $client = new Clients();
+        $client->setDateCreation(new \DateTime());
+        $formInscription = $this->createForm(ClientsType::class, $client);
+        $formInscription->handleRequest($request);
+
+        if( $formInscription->isSubmitted() && $formInscription->isValid()){
+            $em->persist($client);
+            $em->flush();
+            return $this->redirectToRoute('jeuxHalloween',[]);
+            //  return $this->redirectToRoute('halloween');
+
+        }
+
+        return $this->render('inscription.html.twig',
+            ["formInscription"=>$formInscription->createView()]);
+    }
 
     /**
      * @Route("/clients/profils", name="clients_profils")

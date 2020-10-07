@@ -128,7 +128,7 @@ h1{
 /*//////////////////:accueil/////////////////////*/
 
 
-#fantome1, #fantome2, #fantome3, #fantome4, #fantome5, #fantome6{
+#fantome1, #fantome2, #fantome3, #fantome4, #fantome5, #fantome6, #fantome3b, #fantome4b, #fantome5b, #fantome6b{
     position : absolute;
 }
 
@@ -150,6 +150,7 @@ h1{
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-delay: 0s;
+    opacity: 70%;
     animation-timing-function: linear;
 }
 
@@ -199,8 +200,8 @@ h1{
         width:30%;
     }
     50%{
-        transform: translate(7%, -15%) rotate(180deg);
-        width:50%;
+        transform: translate(5%, -15%) rotate(200deg);
+        width:40%;
     }
     100%{
         transform: translate(15%, -30%) rotate(360deg);
@@ -233,7 +234,7 @@ h1{
 
 /*                   TELEPHONE        */
 
-@media screen and (max-width:900px)  {
+@media screen and (max-width:600px)  {
 
     #letters {
         margin-top: 50%;
@@ -248,15 +249,16 @@ h1{
         text-align: center;
         margin: 70% auto auto;
         vertical-align: center;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
     }
     html {
         margin:0;
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/fondHalloween2.jpg") no-repeat center fixed;
+        background: url("../photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center fixed;
+        margin : 5% 5%;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -264,10 +266,19 @@ h1{
         align-items:center;
         justify-content:center;
     }
-
+    .letter{
+        font-size: 80%;
+    }
+    @media screen and (max-width:300px)  {
+        .letter{
+            font-size: 50%;
+        }
+    }
     #divAccueilPhone{
+        margin-top: 30%;
         margin-bottom: auto;
-        width: 100%;
+        height: 100%;
+        vertical-align: center;
         text-align: center;
         visibility : visible;
     }
@@ -289,8 +300,15 @@ h1{
         width: 30%;
         height: 5%;
         top : 90% ; left : 40%;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
+    }
+    #formProfil{
+        width: 90%;
+    }
+    #formProfil input[type=text], #formProfil input[type=email]{
+        width: 100%;
+        margin-top: 1px;
     }
 
 }
@@ -352,18 +370,71 @@ h1{
         opacity : 0.9;
     }
 }
+.classGagnant3b{
+    z-index : 200;
+    animation-name: avancer3b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant4b{
+    z-index : 200;
+    animation-name: avancer4b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer3b{
+    0%{
+        width:10%;
+        opacity: 0;
+    }
+    50%{
+        transform: translate(-70%, -25%) rotate(180deg);
+        width:25%;
+        z-index: 300;
+        opacity : 0.3;
+    }
+    100%{
+        transform: translate(-140%, -50%) rotate(360deg);
+        width:35%;
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer4b {
+    0% {
+        width: 7%;
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-30%, -50%) rotate(360deg);
+        width: 20%;
+        z-index: 300;
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-60%, -70%) rotate(360deg);
+        width: 30%;
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
 
 /*            TABLETTE         */
-@media screen and (min-width:900px) and (max-width:1400px) {
-    #letters {
-        font-size: 5rem;
-    }
+@media screen and (min-width:600px) and (max-width:1030px) {
+
     html {
         margin: 0;
         padding: 0;
     }
     body{
-        background: url("../photos/Halloween/fondHalloween1.png") no-repeat center fixed;
+        background: url("../photos/Halloween/ECRAN_ORDI_800x600px.png") no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -374,10 +445,13 @@ h1{
         justify-content:center;
     }
 
-
+    .letter{
+        font-size: 300%;
+    }
     #divAccueilTablette {
+        margin-top: 30%;
         margin-bottom: auto;
-        width: 100%;
+        height: 100%;
         text-align: center;
         visibility: visible;
     }
@@ -393,8 +467,8 @@ h1{
         text-align: center;
         margin: 40% auto auto;
         vertical-align: center;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
     }
 
     #fantome3{
@@ -410,6 +484,17 @@ h1{
         top: 10%;
         left: 60%;
     }
+    #fantome3b{
+        z-index: 150;
+        width: 10%;
+        top: 40%; left: 80%;
+    }
+
+    #fantome4b{
+        z-index: 150;
+        width: 8%;
+        top: 65%; left: 50%;
+    }
     .btn_class{
         z-index : 300;
         position: absolute;
@@ -417,8 +502,15 @@ h1{
         height: 7%;
         font-size: 1em;
         top : 90% ; left : 45%;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
+    }
+    #formProfil{
+        width: 80%;
+    }
+    #formProfil input[type=text], #formProfil input[type=email]{
+        width: 100%;
+        margin-top: 1px;
     }
 }
 
@@ -478,17 +570,71 @@ h1{
     }
 }
 
-/*               ORDINATEUR            */
-@media screen and (min-width:1400px)  {
-    #letters {
-        font-size: 5rem;
+.classGagnant5b{
+    z-index : 200;
+    animation-name: avancer5b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant6b{
+    z-index : 200;
+    animation-name: avancer6b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer5b{
+    0%{
+        width:10%;
+        opacity: 0;
     }
+    50%{
+        transform: translate(-70%, -25%) rotate(180deg);
+        width:25%;
+        z-index: 300;
+        opacity : 0.3;
+    }
+    100%{
+        transform: translate(-140%, -50%) rotate(360deg);
+        width:35%;
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer6b {
+    0% {
+        width: 7%;
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-30%, -50%) rotate(360deg);
+        width: 20%;
+        z-index: 300;
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-60%, -70%) rotate(360deg);
+        width: 30%;
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
+
+/*               ORDINATEUR            */
+@media screen and (min-width:1030px)  {
+
     html {
         margin:0;
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/fondHalloween.jpg") no-repeat center fixed;
+        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -498,7 +644,9 @@ h1{
         align-items:center;
         justify-content:center;
     }
-
+    .letter{
+        font-size: 2em;
+    }
 
     #divAccueilOrdi{
         margin-top: 10%;
@@ -518,8 +666,8 @@ h1{
         text-align: center;
         margin: 30% auto auto;
         vertical-align: center;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
     }
     #fantome5{
         z-index : 150;
@@ -531,6 +679,17 @@ h1{
         width: 7%;
         top : 5%; left : 30%;
     }
+    #fantome5b{
+        z-index: 150;
+        width: 10%;
+        top: 40%; left: 80%;
+    }
+
+    #fantome6b {
+        z-index: 150;
+        width: 8%;
+        top: 65%; left: 50%;
+    }
     .btn_class{
         z-index : 300;
         position: absolute;
@@ -538,8 +697,16 @@ h1{
         height: 7%;
         font-size: 2em;
         top : 90% ; left : 45%;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
+    }
+    #formProfil{
+        width:30%;
+        height: auto;
+    }
+    #formProfil input[type=text], #formProfil input[type=email]{
+        width: 70%;
+        margin-top: 1px;
     }
 }
 /*////// CREATION DU BUTTON /////*/
@@ -550,18 +717,21 @@ h1{
 .cacher{
     visibility: hidden;
 }
+.neutre{
+    z-index: 500;
+}
 
 @media screen and (orientation:landscape) {
     /* Règles CSS pour une tablette ou un smartphone tenu horizontalement */
     #letters {
-        font-size: 5rem;
+        font-size: 2em;
     }
     html {
         margin:0;
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/fondHalloween.jpg") no-repeat center fixed;
+        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -572,14 +742,16 @@ h1{
         justify-content:center;
     }
 
-
+    .letter{
+        font-size: 1em;
+    }
     #divAccueilOrdi{
-        margin-top: 10%;
         margin-bottom: auto;
         height: 100%;
         text-align: center;
         visibility : visible;
         display: flex;
+
     }
     #divAccueilPhone,#divAccueilTablette {
         display: none;
@@ -592,8 +764,8 @@ h1{
         text-align: center;
         margin: 30% auto auto;
         vertical-align: center;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
     }
     #fantome5{
         z-index : 150;
@@ -612,8 +784,15 @@ h1{
         height: 7%;
         font-size: 0.7em;
         top : 90% ; left : 45%;
-        background-color: orange;
-        border-color: orange;
+        background-color: #f07e26;
+        border-color: #f07e26;
+    }
+    #formProfil{
+        width: 30%;
+    }
+    #formProfil input[type=text], #formProfil input[type=email]{
+        width: 70%;
+        margin-top: 1px;
     }
 }
 
@@ -631,26 +810,31 @@ h1{
     margin-left: auto;
 }
 /*//////////////inscription///////////////////////*/
-
 #formProfil{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:darkgrey ;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    width: 400px;
+    color: white;
+    background:#f07e26 ;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    margin : auto auto;
+    horiz-align: center;
 }
 
 #formProfil>h2{
     text-align: center;
 }
-#formClient input[type=text], #formClient input[type=email]{
-    width: 75%;
-    margin-top: 1px;
-}
 
+#suivant:hover{
+    background-color: dimgrey;
+    color : white;
+}
+#submit:hover, #reset:hover{
+    background-color: dimgrey;
+    color : white;
+}
 .labelClient{
     width: 25%;
     margin :3px;
@@ -669,8 +853,13 @@ h1{
     color: white;
 }
 #divResultat2{
-    background-color: darkgray;
+    color : white;
+    width: 95%;
+    background-color: #f07e26;
     z-index : 400;
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
 }
 /*       CAS AVEC HOTESSE       */
 #resultatTirage1{
@@ -682,9 +871,42 @@ h1{
     color: white;
 }
 #divResultat1{
-    background-color: darkgray;
+    color : white;
+    background-color: #f07e26;
     z-index : 400;
+    width: 95%;
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
 }
+#divResultatPhoto, #imgResultat{
+    z-index: 1000;
+}
+.bonAchatGagnant{
+    z-index : 200;
+    animation-name: bonAchatGagant1;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes bonAchatGagant1{
+    0%{
+        width : 30%;
+        opacity: 0;
+    }
+    50%{
+        width : 60%;
+        opacity : 0.3;
+    }
+    100%{
+        width : 90%;
+        opacity : 1;
+    }
+}
+
 
 /*
 body{

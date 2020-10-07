@@ -7,9 +7,11 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
 
 
 class ClientsType extends AbstractType
@@ -23,9 +25,9 @@ class ClientsType extends AbstractType
                 'Madame' => true,
                 'Monsieur' => false,
             ],])
-            ->add('nom', TextType::class, ['label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('prenom', TextType::class, ['label' => 'Prenom : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('telephone', TextType::class, ['label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('nom', TextType::class, ['attr' => array('id' => 'idNom') ,'label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('prenom', TextType::class, ['label' => 'Prénom : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('telephone', TelType::class, ['attr' => array('maxlength' => 10), 'label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('rgpdPanel', CheckboxType::class, ['label' => 'Inscription à la Newsletter :','required' => false,  'label_attr' => array('id' => 'checkLabel', "default" =>false)])
             ;
