@@ -137,9 +137,9 @@ class HomeController extends AbstractController
         $today = date("Y-m-d");
         $heure = date ("H");
         $min = date ("i");
-        if($heure == 17 & 00<=$min & $min<59){
-            $resultat = HomeController::mecanique(new DateTime('12:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
-        }
+
+            $resultat = HomeController::mecanique(new DateTime('08:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
+
 
         if($today=="2020-10-24"){
             switch($heure){
@@ -235,7 +235,7 @@ class HomeController extends AbstractController
                 $gagnant = new Gagnant();
 
                 $gagnant->setCreneau($heureDepart->format('H:i'));
-                $gagnant->setDateCreation(new DateTime());
+                $gagnant->setDateCreation(new \DateTime());
 
                 $em->persist($gagnant);
                 $em->flush();

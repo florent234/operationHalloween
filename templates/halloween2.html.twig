@@ -41,14 +41,16 @@
                     document.getElementById('divResultatPhoto').className = "neutre";
                     document.getElementById('id_button').className = "btn_class";
                     document.getElementById('imgResultat').className ="bonAchatGagnant";
-                    }, 3000);
+                    }, 2500);
             }
             // redirection vers la page d'accueil après 10 seconde
             retour();
             function retour() {
                 setInterval(function(){
-                    window.location.href = '{{ path('accueilHalloween') }}';
-                    }, 30000);
+                    {% if resultat == 'photos/bon_achat/PERDU.png' %}
+                        window.location.href = '{{ path('accueilHalloween') }}';
+                    {%  endif %}
+                    }, 15000);
             }
         }
 

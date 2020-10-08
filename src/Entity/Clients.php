@@ -53,6 +53,10 @@ class Clients implements UserInterface
      */
     private $dateCreation;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $typeJeux;
 
 
     /**
@@ -183,9 +187,24 @@ class Clients implements UserInterface
         $this->dateCreation = $dateCreation;
 
         return $this;
-
+    }
+    /**
+     * @return mixed
+     */
+    public function getTypeJeux()
+    {
+        return $this->typeJeux;
     }
 
+    /**
+     * @param mixed $typeJeux
+     */
+    public function setTypeJeux($typeJeux)
+    {
+        $this->TypeJeux = $typeJeux;
+
+        return $this;
+    }
 
     /**
      * @return mixed

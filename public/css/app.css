@@ -731,7 +731,7 @@ h1{
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat fixed 50% 50%;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -841,6 +841,15 @@ h1{
 }
 #checkLabel{
     margin :3px;
+}
+#idTel{
+    size: 200px;
+    border-color: red;
+    border-style: solid;
+
+}
+#formProfil>input[type=text]{
+    width: 100%;
 }
 
 /*         CAS DE TIRAGE AU SORT    */
