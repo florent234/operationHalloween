@@ -19,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="jeudi matin site fini. Attendre vérification mathilde et commencer la mise en ligne">
+    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="Jeudi 16h animation Halloween">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +172,7 @@
       <workItem from="1602082831701" duration="1989000" />
       <workItem from="1602084924274" duration="51000" />
       <workItem from="1602140198794" duration="3266000" />
-      <workItem from="1602144451431" duration="9021000" />
+      <workItem from="1602144451431" duration="10032000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journee de mardi">
       <created>1601998480938</created>
@@ -206,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602148627158</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Jeudi 16h animation Halloween">
+      <created>1602165202349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602165202349</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +232,8 @@
     <MESSAGE value="fin de journee de mercredi" />
     <MESSAGE value="matiné mercredi test après rajout au formulaire le type de jeux" />
     <MESSAGE value="jeudi matin site fini. Attendre vérification mathilde et commencer la mise en ligne" />
-    <option name="LAST_COMMIT_MESSAGE" value="jeudi matin site fini. Attendre vérification mathilde et commencer la mise en ligne" />
+    <MESSAGE value="Jeudi 16h animation Halloween" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jeudi 16h animation Halloween" />
   </component>
   <component name="WindowStateProjectService">
     <state x="704" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601894820307">
@@ -256,10 +260,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="743" y="226" key="Github.UntrackedFilesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601644691169" />
-    <state x="560" y="252" key="Vcs.Push.Dialog.v2" timestamp="1602148633640">
+    <state x="560" y="252" key="Vcs.Push.Dialog.v2" timestamp="1602165209433">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="560" y="252" key="Vcs.Push.Dialog.v2/0.23.1920.983@0.23.1920.983" timestamp="1602148633640" />
+    <state x="560" y="252" key="Vcs.Push.Dialog.v2/0.23.1920.983@0.23.1920.983" timestamp="1602165209433" />
     <state x="560" y="253" key="Vcs.Push.Dialog.v2/0.23.1920.986@0.23.1920.986" timestamp="1602084948467" />
     <state x="560" y="254" key="Vcs.Push.Dialog.v2/0.23.1920.989@0.23.1920.989" timestamp="1601998487436" />
     <state x="773" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601967589824">
