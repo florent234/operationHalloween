@@ -65,6 +65,10 @@ class Clients implements UserInterface
     private $rgpdPanel;
 
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $newLetter;
 
 
     /*///////////////////// GETTER AND SETTER ////////////////////*/
@@ -222,8 +226,24 @@ class Clients implements UserInterface
         $this->rgpdPanel = $rgpdPanel;
 
         return $this;
-
     }
+    /**
+     * @return mixed
+     */
+    public function getNewLetter()
+    {
+        return $this->newLetter;
+    }
+
+    /**
+     * @param mixed $newLetter
+     */
+    public function setNewLetter($newLetter)
+    {
+        $this->newLetter = $newLetter;
+        return $this;
+    }
+
 
     /**
      * @inheritDoc

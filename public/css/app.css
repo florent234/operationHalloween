@@ -792,6 +792,17 @@ h1{
         width: 7%;
         top : 5%; left : 30%;
     }
+    #fantome5b{
+        z-index: 150;
+        width: 10%;
+        top: 40%; left: 80%;
+    }
+
+    #fantome6b {
+        z-index: 150;
+        width: 8%;
+        top: 65%; left: 50%;
+    }
     .btn_class{
         z-index : 300;
         position: absolute;
@@ -841,22 +852,41 @@ h1{
     padding-right: 2%;
     padding-top: 1%;
     horiz-align: center;
-}
+    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    border-radius: 10%;
 
+
+    border-width : 5px;
+    border-style: solid;
+    border-color: #3b3f48 ;
+}
+#formProfil input, #formProfil input[type=Checkbox]{
+    border-radius: 5px;
+}
+.checkbox{
+    size: 50px;
+    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    border-radius: 5px;
+}
+#btnProfil{
+    margin-top: 2%;
+}
 #formProfil>h2{
+    text-shadow: #3b3f48 0.1em 0.1em 0.2em;
     text-align: center;
 }
 
 #suivant:hover{
-    background-color: dimgrey;
+    background-color: #3b3f48;
     color : white;
 }
 #submit:hover, #reset:hover{
-    background-color: dimgrey;
+    background-color: #3b3f48;
     color : white;
 }
 
-#checkLabel{
+#checkLabel, #checkLabel2{
     margin :3px;
 }
 
@@ -867,18 +897,52 @@ h1{
     z-index : 400;
     text-align: center;
     vertical-align: center;
-    margin : 2% auto;
-    width : 90%;
+    margin : 2% 2%;
+    height: auto;
     color: white;
+    text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    border-radius: 5px;
+
 }
 #divResultat2{
+    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
     color : white;
-    width: 95%;
+    width: 30%;
+    height: auto;
+    background-size: 60%;
     background-color: #f07e26;
     z-index : 400;
     position: absolute; /* postulat de départ */
     top: 50%; left: 50%; /* à 50%/50% du parent référent */
     transform: translate(-50%, -50%);
+
+    border-radius: 10%;
+    border-width : 5px;
+    border-style: solid;
+    border-color: #3b3f48 ;
+}
+
+.bonAchatGagnant2{
+    z-index : 200;
+    animation-name: bonAchatGagant2;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes bonAchatGagant2{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity : 0.5;
+    }
+    100%{
+
+        opacity : 1;
+    }
 }
 /*       CAS AVEC HOTESSE       */
 #resultatTirage1{
@@ -926,7 +990,12 @@ h1{
     }
 }
 
-
+/* ////// FIN //////*/
+#phraseFin, #phraseFin2{
+    color : white;
+    font-family: Luminari, fantasy;
+    font-size: 100%;
+}
 /*
 body{
     margin: 0;
