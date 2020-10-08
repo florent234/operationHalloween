@@ -304,13 +304,18 @@ h1{
         border-color: #f07e26;
     }
     #formProfil{
-        width: 90%;
+        width: 95%;
+        position: center;
+        vertical-align: center;
+        margin-top: 50%;
     }
     #formProfil input[type=text], #formProfil input[type=email]{
-        width: 100%;
-        margin-top: 1px;
+        width: 65%;
+        margin-top: 3px;
     }
-
+    .labelClient{
+        width: 30%;
+    }
 }
 
 /*                    TABLETTE                  */
@@ -434,7 +439,7 @@ h1{
         padding: 0;
     }
     body{
-        background: url("../photos/Halloween/ECRAN_ORDI_800x600px.png") no-repeat center fixed;
+        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -507,10 +512,14 @@ h1{
     }
     #formProfil{
         width: 80%;
+        margin : auto auto;
     }
     #formProfil input[type=text], #formProfil input[type=email]{
         width: 100%;
         margin-top: 1px;
+    }
+    .labelClient{
+        width: 25%;
     }
 }
 
@@ -635,8 +644,8 @@ h1{
     }
     body{
         background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
-        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-        background-size: cover; /* version standardisée */
+        -webkit-background-size: contain; /* pour anciens Chrome et Safari */
+        background-size: contain; /* version standardisée */
         overflow: hidden;
         height: 100vh;
         width: 100vw;
@@ -703,10 +712,16 @@ h1{
     #formProfil{
         width:30%;
         height: auto;
+        margin : auto auto;
+
     }
     #formProfil input[type=text], #formProfil input[type=email]{
         width: 70%;
         margin-top: 1px;
+    }
+    .labelClient{
+        width: 25%;
+
     }
 }
 /*////// CREATION DU BUTTON /////*/
@@ -788,11 +803,17 @@ h1{
         border-color: #f07e26;
     }
     #formProfil{
-        width: 30%;
+        width: 50%;
+        margin : auto auto;
+
     }
     #formProfil input[type=text], #formProfil input[type=email]{
         width: 70%;
         margin-top: 1px;
+    }
+    .labelClient{
+        width: 25%;
+
     }
 }
 
@@ -819,7 +840,6 @@ h1{
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
-    margin : auto auto;
     horiz-align: center;
 }
 
@@ -835,22 +855,12 @@ h1{
     background-color: dimgrey;
     color : white;
 }
-.labelClient{
-    width: 25%;
-    margin :3px;
-}
+
 #checkLabel{
     margin :3px;
 }
-#idTel{
-    size: 200px;
-    border-color: red;
-    border-style: solid;
 
-}
-#formProfil>input[type=text]{
-    width: 100%;
-}
+
 
 /*         CAS DE TIRAGE AU SORT    */
 #resultatTirage{

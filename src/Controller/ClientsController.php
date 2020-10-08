@@ -23,7 +23,7 @@ class ClientsController extends AbstractController
     {
         $client = new Clients();
         $client->setDateCreation(new \DateTime());
-        $client->setTypeJeux("sansHotesse");
+        $client->setTypeJeux('sansHotesse');
         $formInscription = $this->createForm(ClientsType::class, $client);
         $formInscription->handleRequest($request);
 
@@ -46,12 +46,12 @@ class ClientsController extends AbstractController
     {
         $client = new Clients();
         $client->setDateCreation(new \DateTime());
-       // $client->setTypeJeux("avecHotesse");
+        $client->setTypeJeux('avecHotesse');
         $formInscription = $this->createForm(ClientsType::class, $client);
         $formInscription->handleRequest($request);
 
         if( $formInscription->isSubmitted() && $formInscription->isValid()){
-            $client->setTypeJeux("avecHotesse");
+            $client->setTypeJeux('avecHotesse');
             $em->persist($client);
             $em->flush();
             return $this->redirectToRoute('jeuxHalloween',[]);

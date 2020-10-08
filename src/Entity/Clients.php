@@ -201,7 +201,7 @@ class Clients implements UserInterface
      */
     public function setTypeJeux($typeJeux)
     {
-        $this->TypeJeux = $typeJeux;
+        $this->typeJeux = $typeJeux;
 
         return $this;
     }

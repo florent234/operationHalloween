@@ -25,7 +25,7 @@ class ClientsType extends AbstractType
             ],])
             ->add('nom', TextType::class, ['attr' => array('id' => 'idNom') ,'label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('prenom', TextType::class, ['label' => 'Prénom : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('telephone', TelType::class, ['attr' => array( 'size'=> '42','width'=> '100%','maxlength' => 10, 'id' => 'idTel'), 'label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('telephone', TextType::class, ['attr' => ['maxlength' => '10'], 'label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('rgpdPanel', CheckboxType::class, ['label' => 'Inscription à la Newsletter :','required' => false,  'label_attr' => array('id' => 'checkLabel', "default" =>false)]);
     }

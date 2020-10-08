@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="fin de journee de mercredi">
+    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="matiné mercredi test après rajout au formulaire le type de jeux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_LARGE_1920x1980px.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_LARGE_1920x1980px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_ORDI_800x600px.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/photos/Halloween/ECRAN_ORDI_800x600px.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Clients.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,8 +148,8 @@
       <recent name="$PROJECT_DIR$/public/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/photos/bon_achat" />
       <recent name="$PROJECT_DIR$/public/photos/Halloween" />
+      <recent name="$PROJECT_DIR$/public/photos/bon_achat" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -176,7 +176,8 @@
       <workItem from="1602073070389" duration="7844000" />
       <workItem from="1602082831701" duration="1989000" />
       <workItem from="1602084924274" duration="51000" />
-      <workItem from="1602140198794" duration="2183000" />
+      <workItem from="1602140198794" duration="3266000" />
+      <workItem from="1602144451431" duration="2987000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journee de mardi">
       <created>1601998480938</created>
@@ -192,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602084941992</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="matiné mercredi test après rajout au formulaire le type de jeux">
+      <created>1602142677987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602142677987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +221,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fin de journee de mardi" />
     <MESSAGE value="fin de journee de mercredi" />
-    <option name="LAST_COMMIT_MESSAGE" value="fin de journee de mercredi" />
+    <MESSAGE value="matiné mercredi test après rajout au formulaire le type de jeux" />
+    <option name="LAST_COMMIT_MESSAGE" value="matiné mercredi test après rajout au formulaire le type de jeux" />
   </component>
   <component name="WindowStateProjectService">
     <state x="704" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601894820307">
