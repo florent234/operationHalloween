@@ -257,7 +257,7 @@ h1{
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center fixed;
+        background: url("photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center fixed;
         margin : 5% 5%;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
@@ -439,7 +439,7 @@ h1{
         padding: 0;
     }
     body{
-        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
@@ -643,7 +643,7 @@ h1{
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
         -webkit-background-size: contain; /* pour anciens Chrome et Safari */
         background-size: contain; /* version standardisée */
         overflow: hidden;
@@ -746,7 +746,7 @@ h1{
         padding:0;
     }
     body{
-        background: url("../photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat fixed 50% 50%;
+        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat fixed 50% 50%;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
