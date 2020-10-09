@@ -1,7 +1,11 @@
 {% extends 'layout.html.twig'%}
 
 {%  block body %}
-
+    {% if resultat == 'photos/bon_achat/PERDU.png' %}
+        <div class="js-user-rating" data-is-authenticated='true'>
+            <!-- ... -->
+        </div>
+      {%  endif %}
     <div id="divAccueilPhone">
         <img id="fantome1" onclick="ani2('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
         <img id="fantome2" onclick="ani2('fantome2')" class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome5.png') }}" alt="">
