@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="Jeudi 16h animation Halloween">
+    <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/JavaScript/opHalloween.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +17,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,21 +123,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/src/Entity" />
-      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
+      <recent name="$PROJECT_DIR$/src/Form" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/photos/Halloween" />
-      <recent name="$PROJECT_DIR$/public/photos/bon_achat" />
+      <recent name="$PROJECT_DIR$/public/photos/fondHalloween1" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -162,96 +154,38 @@
       <workItem from="1601469703224" duration="5406000" />
       <workItem from="1601537354476" duration="1334000" />
       <workItem from="1601621987077" duration="17292000" />
-      <workItem from="1601893464693" duration="319000" />
-      <workItem from="1601893814691" duration="1500000" />
-      <workItem from="1601896993071" duration="8983000" />
-      <workItem from="1602053980853" duration="1017000" />
-      <workItem from="1602055514408" duration="9204000" />
-      <workItem from="1602066068983" duration="3181000" />
-      <workItem from="1602073070389" duration="7844000" />
-      <workItem from="1602082831701" duration="1989000" />
-      <workItem from="1602084924274" duration="51000" />
-      <workItem from="1602140198794" duration="3266000" />
-      <workItem from="1602144451431" duration="10032000" />
+      <workItem from="1601729933927" duration="4552000" />
+      <workItem from="1601737875409" duration="3236000" />
+      <workItem from="1601756723987" duration="4339000" />
+      <workItem from="1601761884931" duration="1052000" />
     </task>
-    <task id="LOCAL-00001" summary="fin de journee de mardi">
-      <created>1601998480938</created>
+    <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
+      <created>1601734594092</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1601998480938</updated>
+      <updated>1601734594092</updated>
     </task>
-    <task id="LOCAL-00002" summary="fin de journee de mercredi">
-      <created>1602084941992</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1602084941992</updated>
-    </task>
-    <task id="LOCAL-00003" summary="matiné mercredi test après rajout au formulaire le type de jeux">
-      <created>1602142677987</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1602142677987</updated>
-    </task>
-    <task id="LOCAL-00004" summary="jeudi matin site fini. Attendre vérification mathilde et commencer la mise en ligne">
-      <created>1602148627158</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1602148627158</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Jeudi 16h animation Halloween">
-      <created>1602165202349</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1602165202349</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fin de journee de mardi" />
-    <MESSAGE value="fin de journee de mercredi" />
-    <MESSAGE value="matiné mercredi test après rajout au formulaire le type de jeux" />
-    <MESSAGE value="jeudi matin site fini. Attendre vérification mathilde et commencer la mise en ligne" />
-    <MESSAGE value="Jeudi 16h animation Halloween" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jeudi 16h animation Halloween" />
+    <MESSAGE value="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="704" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601894820307">
-      <screen x="0" y="23" width="1920" height="983" />
+    <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601928211016">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="704" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.983@0.23.1920.983" timestamp="1601894820307" />
-    <state x="756" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1601911003989">
-      <screen x="0" y="23" width="1920" height="983" />
-    </state>
-    <state x="756" y="203" key="#com.intellij.ide.util.MemberChooser/0.23.1920.983@0.23.1920.983" timestamp="1601911003989" />
-    <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601651767138">
-      <screen x="0" y="23" width="1920" height="983" />
-    </state>
+    <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.723@0.23.1280.723" timestamp="1601928211016" />
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
-    <state x="192" y="110" key="DiffContextDialog" timestamp="1601967635845">
-      <screen x="0" y="23" width="1920" height="983" />
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1601734593688">
+      <screen x="0" y="23" width="1280" height="726" />
     </state>
-    <state x="192" y="110" key="DiffContextDialog/0.23.1920.983@0.23.1920.983" timestamp="1601967635845" />
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1601734593688" />
     <state x="809" y="418" key="Github.ShareDialog" timestamp="1601644685177">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
@@ -260,16 +194,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="743" y="226" key="Github.UntrackedFilesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601644691169" />
-    <state x="560" y="252" key="Vcs.Push.Dialog.v2" timestamp="1602165209433">
-      <screen x="0" y="23" width="1920" height="983" />
+    <state x="346" y="118" key="NewPhpClassDialog" timestamp="1601933908121">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="560" y="252" key="Vcs.Push.Dialog.v2/0.23.1920.983@0.23.1920.983" timestamp="1602165209433" />
-    <state x="560" y="253" key="Vcs.Push.Dialog.v2/0.23.1920.986@0.23.1920.986" timestamp="1602084948467" />
-    <state x="560" y="254" key="Vcs.Push.Dialog.v2/0.23.1920.989@0.23.1920.989" timestamp="1601998487436" />
-    <state x="773" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601967589824">
-      <screen x="0" y="23" width="1920" height="983" />
-    </state>
-    <state x="773" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.983@0.23.1920.983" timestamp="1601967589824" />
+    <state x="346" y="118" key="NewPhpClassDialog/0.23.1280.723@0.23.1280.723" timestamp="1601933908121" />
     <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1601628366500">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
