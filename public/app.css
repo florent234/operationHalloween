@@ -8,11 +8,18 @@
 #lien, #lien2{
     text-decoration:none;
     font-family: Luminari, fantasy;
-
 }
 
 #divGlobale {
+    width: 100%;
     font-family: Luminari, fantasy;
+    border-color: red;
+    border-style: solid;
+}
+#divAccueilPhone{
+    width:100%;
+    border-color: yellow;
+    border-style: solid;
 }
 h1{
     z-index : 1000;
@@ -234,7 +241,8 @@ h1{
 
 /*                   TELEPHONE        */
 
-@media screen and (max-width:600px)  {
+@media only screen and (max-width:600px) and (orientation : portrait)   {
+/*   @media only screen and (max-width: 36.9375em) { */
 
     #letters {
         margin-top: 50%;
@@ -257,12 +265,14 @@ h1{
         padding:0;
     }
     body{
-        background: url("photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center fixed;
+        background: url("photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center;
         margin : 5% 5%;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
         display: flex;
+        width: auto;
+        height: 100%;
         align-items:center;
         justify-content:center;
     }
@@ -432,8 +442,8 @@ h1{
 }
 
 /*            TABLETTE         */
-@media screen and (min-width:600px) and (max-width:1030px) {
-
+@media only screen and (min-width:600px) and (max-width:1030px) and (orientation : portrait) {
+       /* @media only screen and (min-width: 37em) and (max-width: 53.6875em) { */
     html {
         margin: 0;
         padding: 0;
@@ -636,15 +646,17 @@ h1{
 }
 
 /*               ORDINATEUR            */
-@media screen and (min-width:1030px)  {
 
-    html {
-        margin:0;
-        padding:0;
-    }
-    body{
-        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
-        -webkit-background-size: contain; /* pour anciens Chrome et Safari */
+@media only  screen and (min-width:1030px) and (orientation : portrait)  {
+     /*     @media only screen and (min-width: 53.75em) and (max-width: 71.25em)  {   */
+
+         html {
+             margin:0;
+             padding:0;
+         }
+         body{
+             background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+             -webkit-background-size: contain; /* pour anciens Chrome et Safari */
         background-size: contain; /* version standardisée */
         overflow: hidden;
         height: 100vh;
@@ -736,7 +748,7 @@ h1{
     z-index: 500;
 }
 
-@media screen and (orientation:landscape) {
+@media only screen and (orientation:landscape) {
     /* Règles CSS pour une tablette ou un smartphone tenu horizontalement */
     #letters {
         font-size: 2em;
