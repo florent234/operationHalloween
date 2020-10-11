@@ -7,19 +7,10 @@
 /*   sup surlignemen a */
 #lien, #lien2{
     text-decoration:none;
-    font-family: Luminari, fantasy;
+    font-family: Luminari, Georgia, serif;
 }
-
 #divGlobale {
-    width: 100%;
-    font-family: Luminari, fantasy;
-    border-color: red;
-    border-style: solid;
-}
-#divAccueilPhone{
-    width:100%;
-    border-color: yellow;
-    border-style: solid;
+    font-family: Luminari, Georgia, serif;
 }
 h1{
     z-index : 1000;
@@ -77,27 +68,6 @@ h1{
 .letter:nth-child(9){
     animation-delay: 3.5s;
 }
-@keyframes up {
-    0% {
-        transform: translate(0,0) skew(0);
-    }
-    20% {
-        transform: translate(0,-40%) skew(-5deg);
-    }
-    40% {
-        transform: translate(0,-80%) skew(8deg);
-    }
-    60% {
-        transform: translate(0,-120%) skew(-7deg);
-    }
-    80% {
-        transform: translate(0,-160%) skew(4deg);
-    }
-    100% {
-        transform: translate(0,-200%) skew(0);
-        opacity: 0;
-    }
-}
 @keyframes right {
     0%{
         transform: translate(0,0) skew(0);
@@ -134,12 +104,11 @@ h1{
 
 /*//////////////////:accueil/////////////////////*/
 
-
 #fantome1, #fantome2, #fantome3, #fantome4, #fantome5, #fantome6, #fantome3b, #fantome4b, #fantome5b, #fantome6b{
     position : absolute;
 }
-
-/*            FANTOME AVANT ANIMATION        */
+/*  ///////////////////////////////////// ANIMATION ////////////////////////// * /
+/* ///////////////////////////////////  FANTOME AVANT ANIMATION  /////////////////  */
 .fantome1 {
     z-index: 100;
     animation-name: flotte;
@@ -191,29 +160,16 @@ h1{
     }
 }
 
-/*///// ANIMATION GAGNANT PHONE ///*/
+/*////////////////////////////////////// ANIMATION  IPHONE ////////////////////////////////*/
 
 .classGagnant1{
     z-index : 200;
     animation-name: avancer;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-delay: 0s;
     animation-timing-function: linear;
-}
-@keyframes avancer{
-    0%{
-        width:30%;
-    }
-    50%{
-        transform: translate(5%, -15%) rotate(200deg);
-        width:40%;
-    }
-    100%{
-        transform: translate(15%, -30%) rotate(360deg);
-        width:80%;
-    }
 }
 .classGagnant2{
     z-index : 200;
@@ -224,60 +180,212 @@ h1{
     animation-delay: 0s;
     animation-timing-function: linear;
 }
-@keyframes avancer2{
+@keyframes avancer{
     0%{
-        width:30%;
-    }
-    50%{
-        transform: translate(-50%, 5%) rotate(360deg);
-        width:50%;
+        transform: translate(5%, -20%) rotate(0deg) scale(1);
     }
     100%{
-        transform: translate(-50%, 10%) rotate(360deg);
-        width:80%;
+        transform: translate(100%, -20%) rotate(360deg) scale(3);
+    }
+}
+@keyframes avancer2{
+    0%{
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+    }
+    100%{
+        transform: translate(-50%, 110%) rotate(360deg) scale(3);
+    }
+}
+/*//////////////////////////////////////////////  ANIMATION   TABLETTE    ///////////////////////////    */
+
+.classGagnant3{
+    z-index : 200;
+    animation-name: avancer3;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant4{
+    z-index : 200;
+    animation-name: avancer4;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+.classGagnant3b{
+    z-index : 200;
+    animation-name: avancer3b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant4b{
+    z-index : 200;
+    animation-name: avancer4b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer3{
+    0%{
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(180%, -100%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer4{
+    0% {
+        transform: translate(0px, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-100%, 190%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
+@keyframes avancer3b{
+    0%{
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-200%, -20%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer4b {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translate(-60%, -140%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
+/*////////////////////////////////////  ANIMATION   ORDINATEUR  ET  LANDSCAP  //////////////////////    */
+
+.classGagnant5{
+    z-index : 200;
+    animation-name: avancer5;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant6{
+    z-index : 200;
+    animation-name: avancer6;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+.classGagnant5b{
+    z-index : 200;
+    animation-name: avancer5b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.classGagnant6b{
+    z-index : 200;
+    animation-name: avancer6b;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes avancer5{
+    0%{
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(450%, -30%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer6 {
+    0% {
+        transform: translate(0px, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(240%, 300%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity: 0.9;
+    }
+}
+@keyframes avancer5b{
+    0%{
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-350%, -20%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity : 0.9;
+    }
+}
+@keyframes avancer6b {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translate(-60%, -160%) rotate(360deg) scale(3);
+        z-index: 300;
+        opacity: 0.9;
     }
 }
 
-
-/*                   TELEPHONE        */
+/*//////////////////////////////////////    TELEPHONE    /////////////////////////    */
 
 @media only screen and (max-width:600px) and (orientation : portrait)   {
-/*   @media only screen and (max-width: 36.9375em) { */
 
-    #letters {
-        margin-top: 50%;
-        vertical-align: center;
-        font-size: 1.5rem;
-    }
-    .button_accueil{
-        z-index : 300;
-        font-size: 30px;
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        margin: 70% auto auto;
-        vertical-align: center;
-        background-color: #f07e26;
-        border-color: #f07e26;
-    }
-    html {
-        margin:0;
-        padding:0;
-    }
     body{
-        background: url("photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat center;
-        margin : 5% 5%;
+        background: url("photos/Halloween/FORMAT_MOBILE_1125X2436px.png") no-repeat;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
-        display: flex;
-        width: auto;
         height: 100%;
-        align-items:center;
+        align-content: center;
         justify-content:center;
     }
+    #letters {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        margin-top: 50%;
+        vertical-align: center;
+        font-size: 1rem;
+    }
     .letter{
-        font-size: 80%;
+        font-size: 100%;
     }
     @media screen and (max-width:300px)  {
         .letter{
@@ -317,7 +425,9 @@ h1{
         width: 95%;
         position: center;
         vertical-align: center;
-        margin-top: 50%;
+        margin-top: 10%;
+        margin-right: auto;
+        margin-left: auto;
     }
     #formProfil input[type=text], #formProfil input[type=email]{
         width: 65%;
@@ -326,124 +436,25 @@ h1{
     .labelClient{
         width: 30%;
     }
-}
-
-/*                    TABLETTE                  */
-
-.classGagnant3{
-    z-index : 200;
-    animation-name: avancer3;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-
-.classGagnant4{
-    z-index : 200;
-    animation-name: avancer4;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-@keyframes avancer3{
-    0%{
-        width:10%;
-        opacity: 0;
+    /*         CAS DE TIRAGE AU SORT    */
+    #resultatTirage{
+        z-index : 400;
+        text-align: center;
+        vertical-align: center;
+        margin : 2% 2%;
+        height: auto;
+        color: white;
+        text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+        border-radius: 5px;
     }
-    50%{
-        transform: translate(50%, -70%) rotate(180deg);
-        width:20%;
-        z-index: 300;
-        opacity : 0.3;
-    }
-    100%{
-        transform: translate(100%, -60%) rotate(360deg);
-        width:30%;
-        z-index: 300;
-        opacity : 0.9;
-    }
-}
-@keyframes avancer4{
-    0%{
-        width: 8%;
-        opacity : 0;
-    }
-    50%{
-        transform: translate(-60%, 0%) rotate(360deg);
-        width:20%;
-        z-index: 300;
-        opacity : 0.3;
-    }
-    100%{
-        transform: translate(-90%, 2%) rotate(360deg);
-        width:30%;
-        z-index: 300;
-        opacity : 0.9;
-    }
-}
-.classGagnant3b{
-    z-index : 200;
-    animation-name: avancer3b;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-
-.classGagnant4b{
-    z-index : 200;
-    animation-name: avancer4b;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-@keyframes avancer3b{
-    0%{
-        width:10%;
-        opacity: 0;
-    }
-    50%{
-        transform: translate(-70%, -25%) rotate(180deg);
-        width:25%;
-        z-index: 300;
-        opacity : 0.3;
-    }
-    100%{
-        transform: translate(-140%, -50%) rotate(360deg);
-        width:35%;
-        z-index: 300;
-        opacity : 0.9;
-    }
-}
-@keyframes avancer4b {
-    0% {
-        width: 7%;
-        opacity: 0;
-    }
-    50% {
-        transform: translate(-30%, -50%) rotate(360deg);
-        width: 20%;
-        z-index: 300;
-        opacity: 0.3;
-    }
-    100% {
-        transform: translate(-60%, -70%) rotate(360deg);
-        width: 30%;
-        z-index: 300;
-        opacity: 0.9;
+    #phraseFin, #phraseFin2{
+        margin-top: 50%;
     }
 }
 
-/*            TABLETTE         */
+/*  ///////////////////////////////////////////////  TABLETTE  //////////////////////////////  */
+
 @media only screen and (min-width:600px) and (max-width:1030px) and (orientation : portrait) {
-       /* @media only screen and (min-width: 37em) and (max-width: 53.6875em) { */
     html {
         margin: 0;
         padding: 0;
@@ -473,41 +484,28 @@ h1{
     #divAccueilPhone,#divAccueilOrdi {
         display: none;
     }
-
-    .button_accueil {
-        z-index: 300;
-        font-size: 30px;
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        margin: 40% auto auto;
-        vertical-align: center;
-        background-color: #f07e26;
-        border-color: #f07e26;
-    }
-
     #fantome3{
         z-index: 150;
-        width: 10%;
+        width: 20%;
         top: 60%;
         left: 5%;
     }
 
     #fantome4 {
         z-index: 150;
-        width: 8%;
+        width: 16%;
         top: 10%;
         left: 60%;
     }
     #fantome3b{
         z-index: 150;
-        width: 10%;
+        width: 20%;
         top: 40%; left: 80%;
     }
 
     #fantome4b{
         z-index: 150;
-        width: 8%;
+        width: 16%;
         top: 65%; left: 50%;
     }
     .btn_class{
@@ -531,133 +529,36 @@ h1{
     .labelClient{
         width: 25%;
     }
-}
+    /*         CAS DE TIRAGE AU SORT    */
+    #resultatTirage{
+        z-index : 400;
+        text-align: center;
+        vertical-align: center;
+        margin : 2% 2%;
+        height: auto;
+        color: white;
+        text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+        border-radius: 5px;
 
-.classGagnant5{
-    z-index : 200;
-    animation-name: avancer5;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-
-.classGagnant6{
-    z-index : 200;
-    animation-name: avancer6;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-@keyframes avancer5{
-    0%{
-        width:10%;
-        opacity: 0;
     }
-    50%{
-        transform: translate(50%, -50%) rotate(180deg);
-        width:25%;
-        z-index: 300;
-        opacity : 0.3;
-    }
-    100%{
-        transform: translate(90%, -50%) rotate(360deg);
-        width:35%;
-        z-index: 300;
-        opacity : 0.9;
-    }
-}
-@keyframes avancer6 {
-    0% {
-        width: 7%;
-        opacity: 0;
-    }
-    50% {
-        transform: translate(0px, 0%) rotate(360deg);
-        width: 20%;
-        z-index: 300;
-        opacity: 0.3;
-    }
-    100% {
-        transform: translate(0px, 0%) rotate(360deg);
-        width: 30%;
-        z-index: 300;
-        opacity: 0.9;
+    #phraseFin, #phraseFin2{
+        margin-top: -30%;
     }
 }
 
-.classGagnant5b{
-    z-index : 200;
-    animation-name: avancer5b;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
 
-.classGagnant6b{
-    z-index : 200;
-    animation-name: avancer6b;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-}
-@keyframes avancer5b{
-    0%{
-        width:10%;
-        opacity: 0;
-    }
-    50%{
-        transform: translate(-70%, -25%) rotate(180deg);
-        width:25%;
-        z-index: 300;
-        opacity : 0.3;
-    }
-    100%{
-        transform: translate(-140%, -50%) rotate(360deg);
-        width:35%;
-        z-index: 300;
-        opacity : 0.9;
-    }
-}
-@keyframes avancer6b {
-    0% {
-        width: 7%;
-        opacity: 0;
-    }
-    50% {
-        transform: translate(-30%, -50%) rotate(360deg);
-        width: 20%;
-        z-index: 300;
-        opacity: 0.3;
-    }
-    100% {
-        transform: translate(-60%, -70%) rotate(360deg);
-        width: 30%;
-        z-index: 300;
-        opacity: 0.9;
-    }
-}
+/* ////////////////////////////////////////  ORDINATEUR /////////////////////////////// */
 
-/*               ORDINATEUR            */
+@media only  screen and (min-width:1030px)   {
 
-@media only  screen and (min-width:1030px) and (orientation : portrait)  {
-     /*     @media only screen and (min-width: 53.75em) and (max-width: 71.25em)  {   */
-
-         html {
-             margin:0;
-             padding:0;
-         }
-         body{
-             background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
-             -webkit-background-size: contain; /* pour anciens Chrome et Safari */
-        background-size: contain; /* version standardisée */
+     html {
+         margin:0;
+         padding:0;
+     }
+     body{
+         background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
         overflow: hidden;
         height: 100vh;
         width: 100vw;
@@ -678,17 +579,6 @@ h1{
     }
     #divAccueilPhone,#divAccueilTablette {
         display: none;
-    }
-    .button_accueil{
-        z-index : 300;
-        font-size: 30px;
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        margin: 30% auto auto;
-        vertical-align: center;
-        background-color: #f07e26;
-        border-color: #f07e26;
     }
     #fantome5{
         z-index : 150;
@@ -722,7 +612,7 @@ h1{
         border-color: #f07e26;
     }
     #formProfil{
-        width:30%;
+        width:60%;
         height: auto;
         margin : auto auto;
 
@@ -735,21 +625,21 @@ h1{
         width: 25%;
 
     }
-}
-/*////// CREATION DU BUTTON /////*/
+    /*         CAS DE TIRAGE AU SORT    */
+    #resultatTirage{
+        z-index : 400;
+        text-align: center;
+        vertical-align: center;
+        margin : 2% 2%;
+        height: auto;
+        color: white;
+        text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+        border-radius: 5px;
 
-.classHide{
-    display : none;
+    }
 }
-.cacher{
-    visibility: hidden;
-}
-.neutre{
-    z-index: 500;
-}
-
+/*   /////////////////////////////  HORIZONTAL  //////////////////////  */
 @media only screen and (orientation:landscape) {
-    /* Règles CSS pour une tablette ou un smartphone tenu horizontalement */
     #letters {
         font-size: 2em;
     }
@@ -783,17 +673,6 @@ h1{
     #divAccueilPhone,#divAccueilTablette {
         display: none;
     }
-    .button_accueil{
-        z-index : 300;
-        font-size: 30px;
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        margin: 30% auto auto;
-        vertical-align: center;
-        background-color: #f07e26;
-        border-color: #f07e26;
-    }
     #fantome5{
         z-index : 150;
         width: 10%;
@@ -826,7 +705,7 @@ h1{
         border-color: #f07e26;
     }
     #formProfil{
-        width: 50%;
+        width: 80%;
         margin : auto auto;
 
     }
@@ -838,6 +717,18 @@ h1{
         width: 25%;
 
     }
+    /*         CAS DE TIRAGE AU SORT    */
+    #resultatTirage{
+        z-index : 400;
+        text-align: center;
+        vertical-align: center;
+        margin : 2% 2%;
+        height: auto;
+        color: white;
+        text-shadow: #3b3f48 0.1em 0.1em 0.2em;
+        border-radius: 5px;
+
+    }
 }
 
 @media print and (max-width:21cm) {
@@ -845,6 +736,34 @@ h1{
 }
 @media not print {
     /* Règles CSS pour tous les périphériques sauf les imprimantes */
+}
+#divResultat2{
+    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    color : white;
+    width: 70%;
+    height: auto;
+    background-size: 60%;
+    background-color: #f07e26;
+    z-index : 400;
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+
+    border-radius: 10%;
+    border-width : 5px;
+    border-style: solid;
+    border-color: #3b3f48 ;
+}
+/*////// CREATION DU BUTTON /////*/
+
+.classHide{
+    display : none;
+}
+.cacher{
+    visibility: hidden;
+}
+.neutre{
+    z-index: 500;
 }
 
 #photoHalloween, #photoHalloween2{
@@ -902,37 +821,22 @@ h1{
     margin :3px;
 }
 
-
-
-/*         CAS DE TIRAGE AU SORT    */
-#resultatTirage{
-    z-index : 400;
-    text-align: center;
-    vertical-align: center;
-    margin : 2% 2%;
-    height: auto;
-    color: white;
-    text-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    border-radius: 5px;
-
-}
-#divResultat2{
-    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
+/* ////// FIN //////*/
+#phraseFin, #phraseFin2{
+    width: 90%;
     color : white;
-    width: 30%;
-    height: auto;
-    background-size: 60%;
-    background-color: #f07e26;
-    z-index : 400;
-    position: absolute; /* postulat de départ */
-    top: 50%; left: 50%; /* à 50%/50% du parent référent */
-    transform: translate(-50%, -50%);
-
-    border-radius: 10%;
-    border-width : 5px;
-    border-style: solid;
-    border-color: #3b3f48 ;
+    vertical-align: central;
+    text-align: center;
+    align-content: center;
+    position: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Luminari, Georgia, serif;
+    text-shadow: 0 0 5px dimgrey, 0 0 10px black;
+    opacity: 0.9;
 }
+
+
 
 .bonAchatGagnant2{
     z-index : 200;
@@ -1002,12 +906,6 @@ h1{
     }
 }
 
-/* ////// FIN //////*/
-#phraseFin, #phraseFin2{
-    color : white;
-    font-family: Luminari, fantasy;
-    font-size: 100%;
-}
 /*
 body{
     margin: 0;

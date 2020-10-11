@@ -1,7 +1,6 @@
 {% extends 'layout.html.twig'%}
 
-{%  block body %}
-
+{%  block main %}
 
     <div id="divAccueilPhone">
         <img id="fantome1" onclick="ani('fantome1')" class="fantome1" src="{{ asset('photos/Halloween/fantome_fantome1.png') }}" alt="">
@@ -20,9 +19,8 @@
         <img id="fantome5b" onclick="ani('fantome5b')"  class="fantome1"  src="{{ asset('photos/Halloween/fantome_fantome4-05.png') }}" alt="">
         <img id="fantome6b" onclick="ani('fantome6b')"  class="fantome2"  src="{{ asset('photos/Halloween/fantome_fantome3.png') }}" alt="">
     </div>
-
-        <div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
-        <h3 id="phraseFin2" class="">Choisissez un fantome, cliquer dessus et découvrez votre résultat</h3>
+    <h2 id="phraseFin2" class="">Choisissez un fantome, cliquer dessus et découvrez votre résultat</h2>
+    <div class="classHide" id="divResultat2"><h2 class="classHide" id="resultatTirage">{{ genre }} {{ nom }}, vous participez au tirage au sort pour gagner 1 bon d'achat de 20€</h2></div>
 
 {% endblock %}
 {% block title %}Jeux{% endblock %}
