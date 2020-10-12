@@ -4,11 +4,6 @@
     <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/opHalloween.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/opHalloween.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +161,9 @@
       <workItem from="1602410963915" duration="333000" />
       <workItem from="1602412138832" duration="12497000" />
       <workItem from="1602451187703" duration="705000" />
-      <workItem from="1602490130665" duration="7575000" />
+      <workItem from="1602490130665" duration="7714000" />
+      <workItem from="1602512715510" duration="136000" />
+      <workItem from="1602538308162" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
       <created>1601734594092</created>
@@ -224,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602427333708</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Dernier vérification lundi 12 octobre">
+      <created>1602512148143</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602512148143</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +241,8 @@
     <MESSAGE value="fixe bdd et clear et dev" />
     <MESSAGE value="sans bdd" />
     <MESSAGE value="css animation with scale" />
-    <option name="LAST_COMMIT_MESSAGE" value="css animation with scale" />
+    <MESSAGE value="Dernier vérification lundi 12 octobre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dernier vérification lundi 12 octobre" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601928211016">
@@ -245,10 +250,10 @@
     </state>
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.723@0.23.1280.723" timestamp="1601928211016" />
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
-    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602427333343">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602512147789">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602271590072" />
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602512147789" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602427333343" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1602410237578" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1602280927366" />
@@ -265,9 +270,10 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="346" y="118" key="NewPhpClassDialog/0.23.1280.723@0.23.1280.723" timestamp="1601933908121" />
-    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602427343092">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602512155480">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.723@0.23.1280.723" timestamp="1602512155480" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.724@0.23.1280.724" timestamp="1602427343092" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.726@0.23.1280.726" timestamp="1602284584609" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.727@0.23.1280.727" timestamp="1602280934227" />
