@@ -86,16 +86,18 @@ function ani2($idFantome){
             document.getElementById('imgResultat').className ="bonAchatGagnant";
         }, 2500);
     }
-    // redirection vers la page d'accueil après 10 seconde
+    // redirection vers la page d'accueil après 10 seconde SI PERDU
     var userRating = document.querySelector('.js-user-rating');
     var isAuthenticated = userRating.dataset.isAuthenticated;
-if(isAuthenticated==='false'){
-    retour();
-}
+
+    if(isAuthenticated==='true'){
+        retour();
+    }
+
     function retour() {
         setInterval(function(){
-            window.location.href = 'http://localhost:8889/operationHalloween/public/accueilHalloween/'; //{{ path('accueilHalloween') }}
-        }, 1000); //modifier 15000
+            window.location.href = "http://www.mavengames.fr/accueilHalloween";
+        }, 15000);
     }
 
 }

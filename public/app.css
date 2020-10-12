@@ -336,7 +336,7 @@ h1{
         opacity: 0;
     }
     100% {
-        transform: translate(240%, 300%) rotate(360deg) scale(3);
+        transform: translate(240%, 200%) rotate(360deg) scale(3);
         z-index: 300;
         opacity: 0.9;
     }
@@ -357,7 +357,7 @@ h1{
         transform: translate(0%, 0%) rotate(0deg) scale(1);
     }
     100% {
-        transform: translate(-60%, -160%) rotate(360deg) scale(3);
+        transform: translate(-60%, -140%) rotate(360deg) scale(3);
         z-index: 300;
         opacity: 0.9;
     }
@@ -413,7 +413,7 @@ h1{
         top : 5%; left : 50%;
     }
     .btn_class{
-        z-index : 300;
+        z-index : 1001;
         position: absolute;
         width: 30%;
         height: 5%;
@@ -446,6 +446,9 @@ h1{
         color: white;
         text-shadow: #3b3f48 0.1em 0.1em 0.2em;
         border-radius: 5px;
+    }
+    #divResultat2{
+        margin-top: 60%;
     }
     #phraseFin, #phraseFin2{
         margin-top: 50%;
@@ -509,7 +512,7 @@ h1{
         top: 65%; left: 50%;
     }
     .btn_class{
-        z-index : 300;
+        z-index : 1001;
         position: absolute;
         width: 10%;
         height: 7%;
@@ -602,7 +605,7 @@ h1{
         top: 65%; left: 50%;
     }
     .btn_class{
-        z-index : 300;
+        z-index : 1001;
         position: absolute;
         width: 10%;
         height: 7%;
@@ -695,7 +698,7 @@ h1{
         top: 65%; left: 50%;
     }
     .btn_class{
-        z-index : 300;
+        z-index : 1001;
         position: absolute;
         width: 10%;
         height: 7%;
@@ -719,15 +722,14 @@ h1{
     }
     /*         CAS DE TIRAGE AU SORT    */
     #resultatTirage{
-        z-index : 400;
+        z-index : 1000;
         text-align: center;
         vertical-align: center;
         margin : 2% 2%;
-        height: auto;
         color: white;
         text-shadow: #3b3f48 0.1em 0.1em 0.2em;
         border-radius: 5px;
-
+        position: relative; /* postulat de départ */
     }
 }
 
@@ -745,7 +747,7 @@ h1{
     background-size: 60%;
     background-color: #f07e26;
     z-index : 400;
-    position: absolute; /* postulat de départ */
+    position: relative; /* postulat de départ */
     top: 50%; left: 50%; /* à 50%/50% du parent référent */
     transform: translate(-50%, -50%);
 
@@ -835,9 +837,6 @@ h1{
     text-shadow: 0 0 5px dimgrey, 0 0 10px black;
     opacity: 0.9;
 }
-
-
-
 .bonAchatGagnant2{
     z-index : 200;
     animation-name: bonAchatGagant2;
@@ -861,51 +860,60 @@ h1{
     }
 }
 /*       CAS AVEC HOTESSE       */
-#resultatTirage1{
-    z-index : 400;
-    text-align: center;
-    vertical-align: center;
-    margin : 3% auto;
-    width : 90%;
-    color: white;
-}
+
+/*
 #divResultat1{
     color : white;
     background-color: #f07e26;
     z-index : 400;
     width: 95%;
-    position: absolute; /* postulat de départ */
-    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    position: absolute;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-}
+}   */
 #divResultatPhoto, #imgResultat{
+    position: relative;
     z-index: 1000;
+    transform-origin: center;
+
 }
 .bonAchatGagnant{
-    z-index : 200;
+    z-index : 1000;
     animation-name: bonAchatGagant1;
     animation-fill-mode: forwards;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 0s;
     animation-timing-function: linear;
+    position: relative;
+    transform-origin: center;
 }
-
-@keyframes bonAchatGagant1{
-    0%{
-        width : 30%;
-        opacity: 0;
-    }
-    50%{
-        width : 60%;
-        opacity : 0.3;
-    }
-    100%{
-        width : 90%;
-        opacity : 1;
+@media only screen and (max-width:600px) and (orientation : portrait) {
+    @keyframes bonAchatGagant1 {
+        0% {
+            transform: translate(0%, 0%) scale(0.2);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0%, 0%) scale(0.6);
+            opacity: 1;
+            z-index: 900;
+        }
     }
 }
-
+@media only screen and (min-width:600px) {
+    @keyframes bonAchatGagant1 {
+        0% {
+            transform: scale(0.2);
+            opacity: 0;
+        }
+        100% {
+            transform:  scale(0.6);
+            opacity: 1;
+            z-index: 900;
+        }
+    }
+}
 /*
 body{
     margin: 0;
