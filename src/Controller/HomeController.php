@@ -310,6 +310,16 @@ class HomeController extends AbstractController
         }
         return $resultat;
     }
+
+    /**
+     * @Route("/admin", name="admin");
+     */
+    public function admin()
+    {
+
+        return $this->render('nav/administrateur.html.twig', [
+        ]);
+    }
 }
 
 

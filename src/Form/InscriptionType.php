@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Photo;
 use App\Entity\User;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -21,19 +22,19 @@ class InscriptionType extends AbstractType
     {
 
         $builder
-            ->add('username', TextType::class, ['label' => 'Pseudo'])
-            ->add('prenom', TextType::class, ['label' => 'Prenom'])
-            ->add('nom', TextType::class, ['label' => 'Nom'])
-            ->add('telephone', TextType::class, ['label' => 'Téléphone'])
-            ->add('email', EmailType::class, ['label' => 'Email'])
+            ->add('username', TextType::class, ['label' => 'Pseudo : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('prenom', TextType::class, ['label' => 'Prenom : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('nom', TextType::class, ['label' => 'Nom : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('telephone', TextType::class, ['attr' => ['maxlength' => '10'],'label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
+            ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('password', RepeatedType::class, ['type'=>PasswordType::class,
                 'invalid_message' => 'les mots de passes ne correspondent pas',
                 'required'=>true,
-                'first_options'=>array('label'=>'Mot de passe'),
-                'second_options'=>array('label'=>'Répéter mot de passe')])
-            ->add('administrateur', ChoiceType::class, ['choices'=> ['Oui'=>true, 'Non'=>false]])
-            ->add('actif', ChoiceType::class, ['choices'=> ['Oui'=>true, 'Non'=>false]])
-            ->add('IdPhoto', FileType::class, array('label'=>'Choisissez une photo'))
+                'first_options'=>array('label'=>'Mot de passe :', 'label_attr' => array('class' => 'labelClient')),
+                'second_options'=>array('label'=>'Répéter mot de passe :', 'label_attr' => array('class' => 'labelClient'))])
+            ->add('administrateur', ChoiceType::class, ['data_class' => null,'label_attr' => array('class' => 'labelClient'),'label' => 'Administrateur : ', 'choices'=> ['Oui'=>true, 'Non'=>false],'attr' => array('class' => 'checkbox')])
+            ->add('actif', ChoiceType::class, ['data_class' => null,'label_attr' => array('class' => 'labelClient'), 'label' => 'Actif : ', 'choices'=> ['Oui'=>true, 'Non'=>false],'attr' => array('class' => 'checkbox')])
+            ->add('IdPhoto', FileType::class, array('data_class' => null, 'label'=>'Choisissez une photo : ', 'label_attr' => array('class' => 'labelClient')))
             ;
 
     }

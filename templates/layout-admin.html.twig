@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Opération Halloween{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('admin.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('photos/Halloween/fantome_fantome5.png') }}">
+</head>
+<body>
+<header>
+
+    <div class="titre">
+        <h2 id="h1Layout"><a id="ah1Layout" href="{{ path('home') }}">Retour au jeu</a> : Opération Halloween</h2>
+    </div>
+
+    <div class="nav">
+        {% include 'nav/nav.html.twig' %}
+    </div>
+
+</header>
+    <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>

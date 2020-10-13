@@ -20,6 +20,28 @@ class ClientsRepository extends ServiceEntityRepository
         parent::__construct($registry, Clients::class);
     }
 
+    public function findHotesse(){
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('c')
+            ->from('App\Entity\Clients', 'c')
+            ->where('c.typeJeux = :typeJeux')
+            ->setParameter('typeJeux', 'avecHotesse')
+            ->orderBy('c.id', 'ASC');
+        return $qb->getQuery()
+            ->getResult();
+    }
+
+    public function findSansHotesse(){
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('c')
+            ->from('App\Entity\Clients', 'c')
+            ->where('c.typeJeux = :typeJeux')
+            ->setParameter('typeJeux', 'sansHotesse')
+            ->orderBy('c.id', 'ASC');
+        return $qb->getQuery()
+            ->getResult();
+    }
+
     public function findByUserMail($mailSaisie)
     {
         try {

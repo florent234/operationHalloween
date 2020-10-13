@@ -1,0 +1,54 @@
+{% extends 'layout-admin.html.twig' %}
+
+{% block main %}
+
+<table id="tableauClients">
+    <thead id="theadClients">
+        <tr>
+            <th>Id</th>
+            <th>Genre</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+            <th>Date d'inscription</th>
+            <th>Aushopping</th>
+            <th>Coclicco</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for utilisateur in utilisateurs %}
+        <tr>
+            <td>{{ utilisateur.userId }}</td>
+            {% if utilisateur.genre == 1 %}
+                <td>Madame</td>
+            {% else %}
+                <td>Monsieur</td>
+            {% endif %}
+            <td>{{ utilisateur.nom }}</td>
+            <td>{{ utilisateur.prenom }}</td>
+            <td>{{ utilisateur.telephone }}</td>
+            <td>{{ utilisateur.email }}</td>
+            <td>{{ utilisateur.dateCreation|date("d/m/Y H:i") }}</td>
+            {% if utilisateur.rgpdPanel == 1 %}
+                <td>OUI</td>
+            {% else %}
+                <td>NON</td>
+            {% endif %}
+            {% if utilisateur.newLetter == 1 %}
+            <td>OUI</td>
+            {% else %}
+                <td>NON</td>
+            {% endif %}
+            <td>
+                <a href="{{ path('clients_profil_afficher', {'id':utilisateur.userId } ) }}">Afficher</a>
+                <a href="{{ path('clients_profil_supprimer', {'id':utilisateur.userId } ) }}">Supprimer</a>
+
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

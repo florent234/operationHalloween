@@ -9,11 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-
-
 class ClientsController extends AbstractController
 {
-
     /**
      * @Route("/inscription", name="inscription")
      */
@@ -34,7 +31,7 @@ class ClientsController extends AbstractController
 
         }
 
-        return $this->render('inscription.html.twig',
+        return $this->render('Client/inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }
     /**
@@ -58,7 +55,7 @@ class ClientsController extends AbstractController
 
         }
 
-        return $this->render('inscription.html.twig',
+        return $this->render('Client/inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }
 
@@ -68,10 +65,22 @@ class ClientsController extends AbstractController
     public function listeUtilisateur(){
 
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
-        $utilisateurs =$userRepo->findAll();
+        $utilisateurs =$userRepo->findSansHotesse();
 
 
-        return $this->render('User/profils.html.twig', [
+        return $this->render('Client/profils.html.twig', [
+            "utilisateurs"=>$utilisateurs]);
+    }
+    /**
+     * @Route("/clients/profils_hotesse", name="clients_profils_hotesse")
+     */
+    public function listeUtilisateurHotesse(){
+
+        $userRepo = $this->getDoctrine()->getRepository(Clients::class);
+        $utilisateurs =$userRepo->findHotesse();
+
+
+        return $this->render('Client/profils.html.twig', [
             "utilisateurs"=>$utilisateurs]);
     }
 
@@ -94,11 +103,34 @@ class ClientsController extends AbstractController
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $utilisateurs =$userRepo->findAll();
 
-        return $this->redirectToRoute('profils',[
+        return $this->redirectToRoute('clients_profils',[
             "utilisateurs"=>$utilisateurs
         ]);
     }
 
+    /**
+     * @Route("/profil_modifier/{id}", name="profil_modifier", requirements={"id": "\d+" })
+     */
+    public function modifier($id, EntityManagerInterface $em,
+                             Request $request){
+
+
+        $userRepo = $this->getDoctrine()->getRepository(Clients::class);
+        $utilisateur =$userRepo->find($id);
+
+        $formInscription = $this->createForm(ClientsType::class, $utilisateur);
+        $formInscription->handleRequest($request);
+
+        if($formInscription->isSubmitted() && $formInscription->isValid()){
+
+            $em->persist($utilisateur);
+            $em->flush();
+
+            return $this->redirectToRoute('admin',[]);
+        }
+
+        return $this->render('User/profil.html.twig', ["formInscription"=>$formInscription->createView()]);
+    }
     /**
      * @Route("/clients/profil_afficher/{id}", name="clients_profil_afficher", requirements={"id": "\d+" })
      */
@@ -112,7 +144,7 @@ class ClientsController extends AbstractController
 
 
 
-        return $this->render('User/profil_afficher.html.twig', [ "utilisateur"=>$utilisateur]);
+        return $this->render('Client/profil_afficher.html.twig', [ "utilisateur"=>$utilisateur]);
     }
 
 

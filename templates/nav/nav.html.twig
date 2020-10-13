@@ -1,5 +1,5 @@
 <div id="nav">
-        <a class="aMenu" href="{{ path('home') }}">Accueil</a>
+        <a class="aMenu" href="{{ path('admin') }}">Accueil</a>
         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
         <a class="aMenu" href="{{ path('logout') }}">Se Déconnecter</a><br>
         {% else %}

@@ -42,8 +42,7 @@ class UserController extends AbstractController
             $em->persist($utilisateur);
             $em->flush();
 
-           // return $this->redirectToRoute('home',['id'=>$utilisateur->getId(), "utilisateur"=>$utilisateur]);
-            return $this->redirectToRoute('home',[]);
+            return $this->redirectToRoute('admin',[]);
 
         }
 
@@ -75,11 +74,11 @@ class UserController extends AbstractController
             $em->flush();
 
             $photoRepo = $this->getDoctrine()->getRepository(Photo::class);
-            $photo = $photoRepo->find(2);
+            $photo = $photoRepo->find(2);  ////   ????????????????????????  ///
 
 
             if ($utilisateur->getUsername()==$user->getUsername()){
-                return $this->redirectToRoute('accueil',[]);
+                return $this->redirectToRoute('admin',[]);
             } else {
                 return $this->redirectToRoute('profils',["photo"=>$photo]);
             }
@@ -162,20 +161,9 @@ class UserController extends AbstractController
      */
     public function afficher($id){
 
-        //id == id de la sortie
-        $sortieRepo = $this->getDoctrine()->getRepository(Sortie::class);
-        $sortie =$sortieRepo->find($id);
-
         $userRepo = $this->getDoctrine()->getRepository(User::class);
-        $utilisateurs =$userRepo->findAll();
+        $utilisateur =$userRepo->find($id);
 
-        $utilisateur = new User();
-
-        foreach ($utilisateurs as $utilisateur1){
-            if($utilisateur1->getUsername()==$sortie->getOrganisateur()->getUsername()){
-                $utilisateur=$utilisateur1;
-            }
-        }
         $photo = $utilisateur->getNomPhoto();
 
         return $this->render('User/profil_afficher.html.twig', ["photo"=>$photo, "utilisateur"=>$utilisateur]);
