@@ -3,14 +3,28 @@ body{
 }
 a{
     text-decoration:none;
+    color :white;
+}
+a:hover{
+    text-decoration:none;
+    color: #c5e6ec;
+}
+button{
+    background-color: #3b3f48 ;
+    border-radius: 10px;
+
+}
+button:hover{
+    color:white;
 }
 #divAdmin{
     color: white;
-    background:#f07e26 ;
+    background: #04a3b3 ;
 
     box-shadow: #3b3f48 0.1em 0.1em 0.2em;
     text-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    border-radius: 10%;
+
+    margin-top : 2%;
 
     border-width : 5px;
     border-style: solid;
@@ -34,15 +48,12 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    background:#f07e26 ;
+    color: black;
+    background: #04a3b3 ;
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
     horiz-align: center;
-    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    text-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    border-radius: 10%;
 
     border-width : 5px;
     border-style: solid;
@@ -93,12 +104,12 @@ a{
     width: 65%;
     position: relative;
     color: white;
-    background:#f07e26 ;
+    background:#04a3b3 ;
     padding: 4%;
     box-shadow: #3b3f48 0.1em 0.1em 0.2em;
     text-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    border-radius: 10%;
 
+    overflow :auto;
     border-width : 5px;
     border-style: solid;
     border-color: #3b3f48 ;
@@ -107,6 +118,44 @@ a{
     margin-left: auto;
     margin-right: auto;
 }
+#photoProfils{
+    margin-top:5%;
+    vertical-align : central;
+}
+#imgProfil{
+    width : 100%;
+    vertical-align : central;
+}
+
+#divProfilsInline1{
+    width : 30%;
+    float : left;
+    margin-left: auto; margin-right: auto;
+}
+#divProfilsInline2{
+    width :30%;
+    float : left;
+    margin-left: 5%; margin-right: 5%;
+}
+#actionsProfils{
+    width :30%;
+    float : left;
+}
+.btnAdministrateur{
+    margin-bottom : 5%;
+    margin-left: 2%;
+    border-color: #04a3b3;
+}
+.buttonClients{
+    border-color: #04a3b3;
+}
+/* ///////////////////////////   NAV    //////////// */
+
+#menuAdmin:hover, #menuAdmin2:hover, #menuAdmin3:hover{
+    color: #c5e6ec;
+}
+
+
 /*  ///////////////////////////////////   AFFICHER LES PROFILS    /////////////////////  */
 /* ////////    TABLEAU    ////// */
 #tableauClients{
@@ -114,7 +163,7 @@ a{
     margin : 8% 2%;
     text-align: center;
     color: white;
-    background-color: #3b3f48;
+    background-color: #04a3b3;
 }
 tbody{
     background-color: white;
@@ -126,7 +175,7 @@ td{
 }
 th{
     width:8%;
-    border-color:#f07e26 ;
+    border-color: #3b3f48;
     border-style: solid;
 }
 #thNom, #tdNom{
@@ -199,9 +248,9 @@ th{
 
 @media only  screen and (min-width:1030px)   {
 
-     body{
-         background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
-         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    body{
+        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
     }
 }
@@ -271,7 +320,7 @@ input,.btnConnexion{
 
 header{
     color: white;
-    background:#f07e26 ;
+    background:#04a3b3 ;
 
     margin: 0;
     display: flex;
@@ -300,11 +349,11 @@ header{
 }
 
 .aMenu:hover{
-    background-color: #f07e26;
+    background-color:#04a3b3;
     color: white;
 }
 .btnConnexion:hover{
-    background-color:#f07e26;
+    background-color:#04a3b3;
     color: white;
 }
 
@@ -321,11 +370,10 @@ header{
     align-items: center;
     justify-content: center;
     color: white;
-    background:#f07e26 ;
+    background:#04a3b3 ;
 
     box-shadow: #3b3f48 0.1em 0.1em 0.2em;
     text-shadow: #3b3f48 0.1em 0.1em 0.2em;
-    border-radius: 10%;
 
     border-width : 5px;
     border-style: solid;

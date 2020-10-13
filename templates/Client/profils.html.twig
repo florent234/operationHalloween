@@ -42,9 +42,7 @@
                 <td>NON</td>
             {% endif %}
             <td>
-                <a href="{{ path('clients_profil_afficher', {'id':utilisateur.userId } ) }}">Afficher</a>
-                <a href="{{ path('clients_profil_supprimer', {'id':utilisateur.userId } ) }}">Supprimer</a>
-
+                <button class="buttonClients"><a href="{{ path('clients_profil_supprimer', {'id':utilisateur.userId } ) }}">Supprimer</a></button>
             </td>
         </tr>
     {% endfor %}

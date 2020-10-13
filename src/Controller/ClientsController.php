@@ -9,6 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/admin")
+ */
 class ClientsController extends AbstractController
 {
     /**
@@ -93,13 +96,9 @@ class ClientsController extends AbstractController
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $utilisateur =$userRepo->find($id);
 
-        if($utilisateur->getActif()==true){
-            $this->addFlash('success', 'Attention vous souhaitez supprimer un utilisateur !! L\'utilisateur dois être désactivé avant !!');
-        } else {
-            $em->remove($utilisateur);
-            $em->flush();
-        }
-
+        $em->remove($utilisateur);
+        $em->flush();
+        
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $utilisateurs =$userRepo->findAll();
 

@@ -1,8 +1,8 @@
 <div id="nav">
-        <a class="aMenu" href="{{ path('admin') }}">Accueil</a>
+        <a class="aMenu" id="menuAdmin" href="{{ path('admin') }}">Accueil</a>
         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-        <a class="aMenu" href="{{ path('logout') }}">Se Déconnecter</a><br>
+        <a class="aMenu" id="menuAdmin2" href="{{ path('logout') }}">Se Déconnecter</a><br>
         {% else %}
-        <a class="aMenu" href="{{ path('connection') }}">Se connecter</a>
+        <a class="aMenu" id="menuAdmin3" href="{{ path('connection') }}">Se connecter</a>
         {% endif %}
 </div>

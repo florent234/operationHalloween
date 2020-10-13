@@ -12,7 +12,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-
+/**
+ * @Route("/admin")
+ */
 class UserController extends AbstractController
 {
     /**
