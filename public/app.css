@@ -447,11 +447,14 @@ h1{
         text-shadow: #3b3f48 0.1em 0.1em 0.2em;
         border-radius: 5px;
     }
-    #divResultat2{
-        margin-top: 60%;
-    }
     #phraseFin, #phraseFin2{
         margin-top: 50%;
+    }
+    #divResultatPhoto{
+        width: auto;
+        position: absolute; /* postulat de départ */
+        top: 0; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -547,6 +550,12 @@ h1{
     #phraseFin, #phraseFin2{
         margin-top: -30%;
     }
+    #divResultatPhoto{
+        width: auto;
+        position: absolute; /* postulat de départ */
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%);
+    }
 }
 
 
@@ -638,7 +647,12 @@ h1{
         color: white;
         text-shadow: #3b3f48 0.1em 0.1em 0.2em;
         border-radius: 5px;
-
+    }
+    #divResultatPhoto{
+        width: auto;
+        position: absolute; /* postulat de départ */
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%);
     }
 }
 /*   /////////////////////////////  HORIZONTAL  //////////////////////  */
@@ -731,6 +745,12 @@ h1{
         border-radius: 5px;
         position: relative; /* postulat de départ */
     }
+    #divResultatPhoto{
+        width: auto;
+        position: absolute; /* postulat de départ */
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%);
+    }
 }
 
 @media print and (max-width:21cm) {
@@ -759,12 +779,7 @@ h1{
 #divResultatPhoto, #imgResultat{
     z-index: 1000;
 }
-#divResultatPhoto{
-    width: auto;
-    position: absolute; /* postulat de départ */
-    top: 50%; left: 50%; /* à 50%/50% du parent référent */
-    transform: translate(-50%, -50%);
-}
+
 /*////// CREATION DU BUTTON /////*/
 
 .classHide{
