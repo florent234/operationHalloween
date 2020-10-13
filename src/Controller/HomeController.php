@@ -14,7 +14,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
 class HomeController extends AbstractController
 {
     // CAS CLIENT TOUTES LA JOURNEE //////////////////////
@@ -55,7 +54,9 @@ class HomeController extends AbstractController
      */
     public function accueilHalloween()
     {
-        $ferme = "Le jeux est fermé, revenez plus tard";
+        //// A MODIFIER ////////
+        $ferme = "Le jeux est fermé, il serra ouvert mardi 13, mercredi 14, vendredi 16 et samedi 17 de 14h à 18h, revenez plus tard";
+       ////// A MODIFIER///////
         $ouvert = "CLIQUEZ POUR COMMENCER";
 
         date_default_timezone_set('Europe/Paris');
@@ -82,17 +83,12 @@ class HomeController extends AbstractController
         $dateDebut3 = date("2020-10-17 14:00");
         $dateFin3 = date("2020-10-17 18:00");
 
-        $dateDebut4 = date("2020-10-12 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-        $dateFin4 = date("2020-10-12 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateDebut4 = date("2020-10-13 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateFin4 = date("2020-10-13 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
 
-        if ($dateDebut1<$today || $dateDebut2<$today || $dateDebut3<$today || $dateDebut4<$today){
-            if($today<$dateFin1 || $today<$dateFin2 || $today<$dateFin3 || $today<$dateFin4){
-                $message = $ouvert;
-                $hotesse = true;
-            } else {
-                $message = $ferme;
-                $hotesse = false;
-            }
+        if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
+            $message = $ouvert;
+            $hotesse = true;
         } else {
             $message = $ferme;
             $hotesse = false;
@@ -142,43 +138,77 @@ class HomeController extends AbstractController
     public function jeuxHalloween(EntityManagerInterface $em )
     {
         $heure=null;
-        $resultat ="Le jeux est ouvert le 24, 28, 30 et 31 octobre de 14h à 18h, à bientôt";
         $tirage=null;
         $rand =null;
 
         date_default_timezone_set('Europe/Paris');
-        $today = date("Y-m-d");
         $heure = date ("H");
         $min = date ("i");
+        $today = date("Y-m-d H:i");
 
-         //   $resultat = HomeController::mecanique(new DateTime('08:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
-/////////////////////////////////////////  V   TEST    V    ////////////////////////////////////////////////////
+        /* $dateDebut1 = date("2020-10-24 14:00");
+        $dateFin1 = date("2020-10-24 18:00");
 
-        if($today=="2020-10-12"){
-            $resultat = HomeController::mecanique2($heure, $em, $min);
-        }
-        if($today=="2020-10-17"){
-            $resultat =  HomeController::mecanique2($heure, $em, $min);
-        }
-        if($today=="2020-10-14"){
-            $resultat = HomeController::mecanique1($heure, $em, $min);
-        }
-        if($today=="2020-10-16"){
-            $resultat = HomeController::mecanique1($heure, $em, $min);
-        }
-////////////////////////////////  ^   TEST    ^  /////////////////////////////////////////////////////////
+        $dateDebut2 = date("2020-10-28 14:00");
+        $dateFin2 = date("2020-10-28 18:00");
 
-        if($today=="2020-10-24"){
-            $resultat = HomeController::mecanique2($heure, $em, $min);
-        }
-        if($today=="2020-10-31"){
-            $resultat = HomeController::mecanique1($heure, $em, $min);
-        }
-        if($today=="2020-10-28"){
-            $resultat = HomeController::mecanique2($heure, $em, $min);
-        }
-        if($today=="2020-10-30"){
-           $resultat =  HomeController::mecanique2($heure, $em, $min);
+        $dateDebut3 = date("2020-10-30 14:00");
+        $dateFin3 = date("2020-10-30 18:00");
+
+        $dateDebut4 = date("2020-10-31 14:00");
+        $dateFin4 = date("2020-10-31 18:30"); */
+
+        /////////////////////////////////////////  V   TEST    V    ////////////////////////////////////////////////////
+
+        $dateDebut1 = date("2020-10-14 14:00");
+        $dateFin1 = date("2020-10-14 18:00");
+
+        $dateDebut2 = date("2020-10-16 14:00");
+        $dateFin2 = date("2020-10-16 18:00");
+
+        $dateDebut3 = date("2020-10-17 14:00");
+        $dateFin3 = date("2020-10-17 18:00");
+
+        $dateDebut4 = date("2020-10-13 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateFin4 = date("2020-10-13 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+
+        ////////////////////////////////  ^   TEST    ^  /////////////////////////////////////////////////////////
+
+
+        if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
+
+            $resultat = HomeController::mecanique(new DateTime('09:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
+            /////////////////////////////////////////  V   TEST    V    ////////////////////////////////////////////////////
+
+            if ($today == "2020-10-12") {
+                $resultat = HomeController::mecanique2($heure, $em, $min);
+            }
+            if ($today == "2020-10-17") {
+                $resultat = HomeController::mecanique2($heure, $em, $min);
+            }
+            if ($today == "2020-10-14") {
+                $resultat = HomeController::mecanique1($heure, $em, $min);
+            }
+            if ($today == "2020-10-16") {
+                $resultat = HomeController::mecanique1($heure, $em, $min);
+            }
+            ////////////////////////////////  ^   TEST    ^  /////////////////////////////////////////////////////////
+
+            if ($today == "2020-10-24") {
+                $resultat = HomeController::mecanique2($heure, $em, $min);
+            }
+            if ($today == "2020-10-31") {
+                $resultat = HomeController::mecanique1($heure, $em, $min);
+            }
+            if ($today == "2020-10-28") {
+                $resultat = HomeController::mecanique2($heure, $em, $min);
+            }
+            if ($today == "2020-10-30") {
+                $resultat = HomeController::mecanique2($heure, $em, $min);
+            }
+
+        } else {
+            $resultat ="Le jeux est ouvert le 24, 28, 30 et 31 octobre de 14h à 18h, à bientôt";
         }
 
         return $this->render('halloween2.html.twig',
