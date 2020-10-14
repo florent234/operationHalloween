@@ -822,6 +822,10 @@ h1{
 }
 #formProfil input, #formProfil input[type=Checkbox]{
     border-radius: 5px;
+    border-style: solid;
+    border-color: #3b3f48;
+    box-shadow: #3b3f48 0.2em 0.2em 0.4em;
+
 }
 .checkbox{
     size: 50px;

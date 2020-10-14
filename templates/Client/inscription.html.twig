@@ -2,10 +2,10 @@
 
 {% block main %}
 
-    <div id="formProfil">
+    <div id="formProfil" class="switch">
         <h2 id="h2Inscription">Inscription</h2>
-            {{ form_start(formInscription) }}
-            {{ form_widget(formInscription) }}
+        {{ form_start(formInscription) }}
+        {{ form_widget(formInscription) }}
         <div id="btnProfil">
             <button type="submit" id="submit" class="suivant" name="submit">Suivant</button>
             <button type="reset" id="reset" name="reset">Annuler</button><br><br>

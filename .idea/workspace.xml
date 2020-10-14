@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Client/profils.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Client/profils.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout-admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout-admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav/administrateur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav/administrateur.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav/nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ClientsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Client/inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Client/inscription.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,9 @@
       <workItem from="1602538308162" duration="1129000" />
       <workItem from="1602574716744" duration="2372000" />
       <workItem from="1602577422530" duration="14943000" />
-      <workItem from="1602599803633" duration="7610000" />
+      <workItem from="1602599803633" duration="8448000" />
+      <workItem from="1602631797697" duration="658000" />
+      <workItem from="1602663697959" duration="3902000" />
     </task>
     <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
       <created>1601734594092</created>
@@ -266,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602606254507</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Parti admi : Inscription et Gestion utilisateur. Consultation des clients">
+      <created>1602629478218</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602629478218</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,10 +299,10 @@
     </state>
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.723@0.23.1280.723" timestamp="1602599651232" />
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
-    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602606254136">
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602629478004">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602606254136" />
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602629478004" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602427333343" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1602410237578" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1602280927366" />
@@ -314,10 +323,10 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="346" y="118" key="NewPhpClassDialog/0.23.1280.723@0.23.1280.723" timestamp="1601933908121" />
-    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602606261512">
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602629505878">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.723@0.23.1280.723" timestamp="1602606261512" />
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.723@0.23.1280.723" timestamp="1602629505878" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.724@0.23.1280.724" timestamp="1602427343092" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.726@0.23.1280.726" timestamp="1602284584609" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.727@0.23.1280.727" timestamp="1602280934227" />

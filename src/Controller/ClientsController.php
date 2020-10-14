@@ -9,9 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/admin")
- */
+
 class ClientsController extends AbstractController
 {
     /**
@@ -63,7 +61,7 @@ class ClientsController extends AbstractController
     }
 
     /**
-     * @Route("/clients/profils", name="clients_profils")
+     * @Route("/admin/clients/profils", name="clients_profils")
      */
     public function listeUtilisateur(){
 
@@ -75,7 +73,7 @@ class ClientsController extends AbstractController
             "utilisateurs"=>$utilisateurs]);
     }
     /**
-     * @Route("/clients/profils_hotesse", name="clients_profils_hotesse")
+     * @Route("/admin/clients/profils_hotesse", name="clients_profils_hotesse")
      */
     public function listeUtilisateurHotesse(){
 
@@ -89,26 +87,35 @@ class ClientsController extends AbstractController
 
 
     /**
-     * @Route("/clients/supprimer/{id}", name="clients_profil_supprimer", requirements={"id": "\d+" });
+     * @Route("/admin/clients/supprimer/{id}", name="clients_profil_supprimer", requirements={"id": "\d+" });
      */
     public function supprimer($id, EntityManagerInterface $em){
 
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $utilisateur =$userRepo->find($id);
 
+        $direction = $utilisateur->getTypeJeux();
+
         $em->remove($utilisateur);
         $em->flush();
-        
+
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $utilisateurs =$userRepo->findAll();
 
-        return $this->redirectToRoute('clients_profils',[
-            "utilisateurs"=>$utilisateurs
-        ]);
+        if($direction==="sansHotesse"){
+            return $this->redirectToRoute('clients_profils',[
+                "utilisateurs"=>$utilisateurs
+            ]);
+        } else {
+            return $this->redirectToRoute('clients_profils_hotesse',[
+                "utilisateurs"=>$utilisateurs
+            ]);
+        }
+
     }
 
     /**
-     * @Route("/profil_modifier/{id}", name="profil_modifier", requirements={"id": "\d+" })
+     * @Route("/admin/profil_modifier/{id}", name="profil_modifier", requirements={"id": "\d+" })
      */
     public function modifier($id, EntityManagerInterface $em,
                              Request $request){
@@ -131,7 +138,7 @@ class ClientsController extends AbstractController
         return $this->render('User/profil.html.twig', ["formInscription"=>$formInscription->createView()]);
     }
     /**
-     * @Route("/clients/profil_afficher/{id}", name="clients_profil_afficher", requirements={"id": "\d+" })
+     * @Route("/admin/clients/profil_afficher/{id}", name="clients_profil_afficher", requirements={"id": "\d+" })
      */
     public function afficher($id){
 

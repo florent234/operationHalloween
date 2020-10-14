@@ -7,7 +7,6 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -27,7 +26,7 @@ class ClientsType extends AbstractType
             ->add('prenom', TextType::class, ['label' => 'Prénom : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('telephone', TextType::class, ['attr' => ['maxlength' => '10'], 'label' => 'Téléphone : ', 'label_attr' => array('class' => 'labelClient')])
             ->add('email', EmailType::class, ['label' => 'Email : ', 'label_attr' => array('class' => 'labelClient')])
-            ->add('rgpdPanel', CheckboxType::class, ['label' => 'J’accepte de recevoir les actualités et les offres du centre commercial Aushopping Porte du future :','attr' => array('class' => 'checkbox'), 'required' => false,  'label_attr' => array('id' => 'checkLabel', "default" =>false)])
+            ->add('rgpdPanel', CheckboxType::class, ['label' => 'J’accepte de recevoir les actualités et les offres du centre commercial Aushopping Porte du futur :','attr' => array('class' => 'checkbox'), 'required' => false,  'label_attr' => array('id' => 'checkLabel', "default" =>false)])
             ->add('newLetter', CheckboxType::class, ['label' => 'J’accepte de participer au panel de consommateurs Coclicco :','required' => false,'attr' => array('class' => 'checkbox'),  'label_attr' => array('id' => 'checkLabel2', "default" =>false)]);
         ;
     }

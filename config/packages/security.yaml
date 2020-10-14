@@ -16,9 +16,11 @@ security:
             form_login:
                 login_path: connection
                 check_path: connection
+                default_target_path: admin
             logout:
                 path: logout
                 target: connection
+
     encoders:
         App\Entity\User:
             algorithm: bcrypt
@@ -34,4 +36,3 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
