@@ -13,6 +13,8 @@ use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Date;
+
 
 class HomeController extends AbstractController
 {
@@ -32,7 +34,7 @@ class HomeController extends AbstractController
         $today = date("Y-m-d H:i");
 
         $dateDebut = date("2020-10-02 08:30");  ///////// DATE DEBUT CONCOURS
-        $dateFin = date("2020-10-27 18:30");    /////// DATE DE FIN DU CONCOURS
+        $dateFin = date("2020-10-27 21:00");    /////// DATE DE FIN DU CONCOURS
 
         if ($dateDebut<$today){
             if($today<$dateFin){
@@ -48,56 +50,6 @@ class HomeController extends AbstractController
             ["message"=>$message, "date"=>$today, "hotesse"=>$hotesse]);
     }
 
-    // CAS HOTESSE JUSTE DE 14H A 18H /////////////////////////////////////////
-    /**
-     * @Route("/accueilHalloween", name="accueilHalloween")
-     */
-    public function accueilHalloween()
-    {
-        //// A MODIFIER ////////
-        $ferme = "Le jeux est fermé, il serra ouvert mardi 13, mercredi 14, vendredi 16 et samedi 17 de 14h à 18h, revenez plus tard";
-       ////// A MODIFIER///////
-        $ouvert = "CLIQUEZ POUR COMMENCER";
-
-        date_default_timezone_set('Europe/Paris');
-        $today = date("Y-m-d H:i");
-
-        /* $dateDebut1 = date("2020-10-24 14:00");
-        $dateFin1 = date("2020-10-24 18:00");
-
-        $dateDebut2 = date("2020-10-28 14:00");
-        $dateFin2 = date("2020-10-28 18:00");
-
-        $dateDebut3 = date("2020-10-30 14:00");
-        $dateFin3 = date("2020-10-30 18:00");
-
-        $dateDebut4 = date("2020-10-31 14:00");
-        $dateFin4 = date("2020-10-31 18:30"); */
-
-        $dateDebut1 = date("2020-10-14 14:00");
-        $dateFin1 = date("2020-10-14 18:00");
-
-        $dateDebut2 = date("2020-10-16 14:00");
-        $dateFin2 = date("2020-10-16 18:00");
-
-        $dateDebut3 = date("2020-10-17 14:00");
-        $dateFin3 = date("2020-10-17 18:00");
-
-        $dateDebut4 = date("2020-10-13 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-        $dateFin4 = date("2020-10-13 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-
-        if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
-            $message = $ouvert;
-            $hotesse = true;
-        } else {
-            $message = $ferme;
-            $hotesse = false;
-        }
-
-        return $this->render('accueil.html.twig',
-            ["message"=>$message, "hotesse"=>$hotesse]);
-    }
-
     // CAS CLIENT TOUTES LA JOURNEE //////////////////////
 
     /**
@@ -107,11 +59,11 @@ class HomeController extends AbstractController
      */
     public function halloween($id)
     {
+        date_default_timezone_set('Europe/Paris');
+
         $nom = null;
         $genre = null;
         $rand=null;
-
-        date_default_timezone_set('Europe/Paris');
 
         $userRepo = $this->getDoctrine()->getRepository(Clients::class);
         $client = $userRepo->find($id);
@@ -160,8 +112,8 @@ class HomeController extends AbstractController
 
         /////////////////////////////////////////  V   TEST    V    ////////////////////////////////////////////////////
 
-        $dateDebut1 = date("2020-10-14 14:00");
-        $dateFin1 = date("2020-10-14 18:00");
+        $dateDebut1 = date("2020-10-15 10:00");
+        $dateFin1 = date("2020-10-15 18:00");
 
         $dateDebut2 = date("2020-10-16 14:00");
         $dateFin2 = date("2020-10-16 18:00");
@@ -177,11 +129,11 @@ class HomeController extends AbstractController
 
         if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
 
-            $resultat = HomeController::mecanique(new DateTime('09:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em );    //////// JUSTE POUR TESTER ///////////
+            $resultat = HomeController::mecanique(new DateTime('09:44'), new DateTime('17:30'), "/operationHalloween/public/photos/bon_achat/BODY_MINUTE.png",$em , -1);    //////// JUSTE POUR TESTER ///////////
             /////////////////////////////////////////  V   TEST    V    ////////////////////////////////////////////////////
 
-            if ($today == "2020-10-12") {
-                $resultat = HomeController::mecanique2($heure, $em, $min);
+            if ($today == "2020-10-15") {
+                $resultat = "photos/bon_achat/PERDU.png";
             }
             if ($today == "2020-10-17") {
                 $resultat = HomeController::mecanique2($heure, $em, $min);
@@ -216,36 +168,42 @@ class HomeController extends AbstractController
                 , "rand"=>$rand , "tirages"=>$tirage
             ]);
     }
+
     public function mecanique1($heure, $em, $min){
         switch($heure){
-            case $heure == 14 & 00<=$min & $min<30 : $resultat = HomeController::mecanique( new DateTime('14:00'), new DateTime("14:30"), "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
-            case $heure ==14 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("14:30"), new DateTime("15:00"), "photos/bon_achat/CENTRAKOR.png",$em ); break;
-            case $heure ==15 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("15:00"), new DateTime("15:30"), "photos/bon_achat/FRANCK_P.png",$em ); break;
-            case $heure ==15 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("15:30"), new DateTime("16:00"), "photos/bon_achat/MICRO.png",$em ); break;
-            case $heure == 16 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("16:00"), new DateTime("16:30"), "photos/bon_achat/HEXA.png",$em ); break;
-            case $heure ==16 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("16:30"), new DateTime("17:00"), "photos/bon_achat/NOELIE.png",$em ); break;
-            case $heure == 17 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("17:00"), new DateTime("17:30"), "photos/bon_achat/BODY_MINUTE.png",$em ); break;
-            case $heure ==17 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("17:30"), new DateTime("18:00"), "photos/bon_achat/OLIPHIL.png",$em ); break;
+            case $heure == 14 & 00<=$min & $min<30 : $resultat = HomeController::mecanique( new DateTime('14:00'), new DateTime("14:30"), "photos/bon_achat/MAISONS_MONDE.png",$em, 0 ); break;
+            case $heure ==14 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("14:30"), new DateTime("15:00"), "photos/bon_achat/CENTRAKOR.png",$em, 1); break;
+            case $heure ==15 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("15:00"), new DateTime("15:30"), "photos/bon_achat/FRANCK_P.png",$em, 2 ); break;
+            case $heure ==15 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("15:30"), new DateTime("16:00"), "photos/bon_achat/MICRO.png",$em, 3 ); break;
+            case $heure == 16 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("16:00"), new DateTime("16:30"), "photos/bon_achat/HEXA.png",$em , 4); break;
+            case $heure ==16 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("16:30"), new DateTime("17:00"), "photos/bon_achat/NOELIE.png",$em, 5 ); break;
+            case $heure == 17 & 00<=$min & $min<30 : $resultat = HomeController::mecanique(new DateTime("17:00"), new DateTime("17:30"), "photos/bon_achat/BODY_MINUTE.png",$em, 6 ); break;
+            case $heure ==17 & 30<=$min & $min<60 : $resultat = HomeController::mecanique(new DateTime("17:30"), new DateTime("18:00"), "photos/bon_achat/OLIPHIL.png",$em, 7 ); break;
         }
         return $resultat;
     }
     public function mecanique2($heure, $em, $min){
         switch($heure){
-            case $heure == 14 & 00<=$min & $min<34 : $resultat = HomeController::mecanique(new DateTime("14:00"), new DateTime("14:34"), "photos/bon_achat/BODY_MINUTE.png",$em ); break;
-            case $heure ==14 & 34<=$min || $heure ==15 & $min<9 : $resultat = HomeController::mecanique(new DateTime("14:34"), new DateTime("15:09"), "photos/bon_achat/LANDREAU.png",$em ); break;
-            case $heure ==15 & 9<=$min & $min<43 : $resultat = HomeController::mecanique(new DateTime("15:09"), new DateTime("15:43"), "photos/bon_achat/CACHE_CACHE.png",$em ); break;
-            case $heure ==15 & 43<=$min || $heure ==16 & $min<17 : $resultat = HomeController::mecanique(new DateTime("15:43"), new DateTime("16:17") , "photos/bon_achat/MAISONS_MONDE.png",$em ); break;
-            case $heure == 16 & 17<=$min & $min<51 : $resultat = HomeController::mecanique(new DateTime("16:17"), new DateTime("16:51"), "photos/bon_achat/NOCIBE.png",$em ); break;
-            case $heure ==16 & 51<=$min || $heure ==17 & $min<26 : $resultat = HomeController::mecanique(new DateTime("16:51"), new DateTime("17:26"), "photos/bon_achat/VISUAL.png",$em ); break;
-            case $heure == 17 & 26<=$min & $min<=60 : $resultat = HomeController::mecanique(new DateTime("17:26"), new DateTime("18:00"), "photos/bon_achat/GRAIN_DEMALICE.png",$em ); break;
+            case $heure == 14 & 00<=$min & $min<34 : $resultat = HomeController::mecanique(new DateTime("14:00"), new DateTime("14:34"), "photos/bon_achat/BODY_MINUTE.png",$em, 0 ); break;
+            case $heure ==14 & 34<=$min || $heure ==15 & $min<9 : $resultat = HomeController::mecanique(new DateTime("14:34"), new DateTime("15:09"), "photos/bon_achat/LANDREAU.png",$em, 1 ); break;
+            case $heure ==15 & 9<=$min & $min<43 : $resultat = HomeController::mecanique(new DateTime("15:09"), new DateTime("15:43"), "photos/bon_achat/CACHE_CACHE.png",$em, 2 ); break;
+            case $heure ==15 & 43<=$min || $heure ==16 & $min<17 : $resultat = HomeController::mecanique(new DateTime("15:43"), new DateTime("16:17") , "photos/bon_achat/MAISONS_MONDE.png",$em, 3 ); break;
+            case $heure == 16 & 17<=$min & $min<51 : $resultat = HomeController::mecanique(new DateTime("16:17"), new DateTime("16:51"), "photos/bon_achat/NOCIBE.png",$em, 4 ); break;
+            case $heure ==16 & 51<=$min || $heure ==17 & $min<26 : $resultat = HomeController::mecanique(new DateTime("16:51"), new DateTime("17:26"), "photos/bon_achat/VISUAL.png",$em, 5 ); break;
+            case $heure == 17 & 26<=$min & $min<=60 : $resultat = HomeController::mecanique(new DateTime("17:26"), new DateTime("18:00"), "photos/bon_achat/GRAIN_DEMALICE.png",$em, 6 ); break;
         }
         return $resultat;
     }
-    public function mecanique(DateTime $heureDepart, DateTime $heureArrive, String $bonAchat,  $em) : string{
+    public function mecanique(DateTime $heureDepart, DateTime $heureArrive, String $bonAchat,  $em, int $nbr) : string{
         $notAllReady = true;
         $rand=null;
 
         date_default_timezone_set('Europe/Paris');
+
+        $now = new DateTime("Y/m/d");    /////// DATE DE FIN DU CONCOURS
+
+
+
 
         // récupérer le tableau de Tirage
         $userRepo = $this->getDoctrine()->getRepository(Tirage::class);
@@ -260,6 +218,10 @@ class HomeController extends AbstractController
                 $notAllReady=false;
             }
         }
+
+
+
+
         // CAS OU IL N Y A PAS DE GAGNANT ENCORE SUR LE CRENEAU HORRAIRE
         if ($notAllReady) {
             // utiliser rand pour récupérer un numéro
@@ -290,7 +252,7 @@ class HomeController extends AbstractController
                 $resultat = "photos/bon_achat/PERDU.png";
             }
 
-            $now = new DateTime("now");
+            // Faire gagner si dans les 5 derniers minutes aucun gagnant
 
             $diff = $now->diff($heureArrive);
             $nb_minute = $diff->i;
@@ -307,6 +269,20 @@ class HomeController extends AbstractController
             }
         } else {
             $resultat = "photos/bon_achat/PERDU.png";
+        }
+
+        // Faire gagner si sur le précédent creanau aucun gagnant
+        $userRepo = $this->getDoctrine()->getRepository(Gagnant::class);
+        $gagnant = $userRepo->findByDate($now);
+
+        if(sizeof($gagnant) < $nbr){
+            $resultat = $bonAchat;
+            $gagnant = new Gagnant();
+            $gagnant->setCreneau($heureDepart - 1800);
+            $gagnant->setDateCreation(new DateTime());
+
+            $em->persist($gagnant);
+            $em->flush();
         }
         return $resultat;
     }

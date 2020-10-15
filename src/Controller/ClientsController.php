@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Clients;
 use App\Form\ClientsType;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 
 class ClientsController extends AbstractController
@@ -18,44 +20,56 @@ class ClientsController extends AbstractController
     public function inscripton(EntityManagerInterface $em,
                                Request $request)
     {
+        date_default_timezone_set('Europe/Paris');
+
         $client = new Clients();
-        $client->setDateCreation(new \DateTime());
-        $client->setTypeJeux('sansHotesse');
-        $formInscription = $this->createForm(ClientsType::class, $client);
-        $formInscription->handleRequest($request);
+        $client->setDateCreation(new DateTime());
 
-        if( $formInscription->isSubmitted() && $formInscription->isValid()){
-            $em->persist($client);
-            $em->flush();
-            return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
-          //  return $this->redirectToRoute('halloween');
+        $today = date("Y-m-d H:i");
 
-        }
+        /* $dateDebut1 = date("2020-10-24 14:00");
+        $dateFin1 = date("2020-10-24 18:00");
 
-        return $this->render('Client/inscription.html.twig',
-            ["formInscription"=>$formInscription->createView()]);
-    }
-    /**
-     * @Route("/inscriptions", name="inscriptions")
-     */
-    public function inscriptons(EntityManagerInterface $em,
-                               Request $request)
-    {
-        $client = new Clients();
-        $client->setDateCreation(new \DateTime());
-        $client->setTypeJeux('avecHotesse');
-        $formInscription = $this->createForm(ClientsType::class, $client);
-        $formInscription->handleRequest($request);
+        $dateDebut2 = date("2020-10-28 14:00");
+        $dateFin2 = date("2020-10-28 18:00");
 
-        if( $formInscription->isSubmitted() && $formInscription->isValid()){
+        $dateDebut3 = date("2020-10-30 14:00");
+        $dateFin3 = date("2020-10-30 18:00");
+
+        $dateDebut4 = date("2020-10-31 14:00");
+        $dateFin4 = date("2020-10-31 18:30"); */
+
+        $dateDebut1 = date("2020-10-15 11:00");
+        $dateFin1 = date("2020-10-15 13:00");
+
+        $dateDebut2 = date("2020-10-16 14:00");
+        $dateFin2 = date("2020-10-16 18:00");
+
+        $dateDebut3 = date("2020-10-17 14:00");
+        $dateFin3 = date("2020-10-17 18:00");
+
+        $dateDebut4 = date("2020-10-13 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateFin4 = date("2020-10-13 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+
+        if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
             $client->setTypeJeux('avecHotesse');
-            $em->persist($client);
-            $em->flush();
-            return $this->redirectToRoute('jeuxHalloween',[]);
-            //  return $this->redirectToRoute('halloween');
-
+        } else {
+            $client->setTypeJeux('sansHotesse');
         }
 
+        $formInscription = $this->createForm(ClientsType::class, $client);
+        $formInscription->handleRequest($request);
+
+        if( $formInscription->isSubmitted() && $formInscription->isValid()){
+            $em->persist($client);
+            $em->flush();
+
+            if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
+                return $this->redirectToRoute('jeuxHalloween',[]);
+            } else {
+                return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
+            }
+        }
         return $this->render('Client/inscription.html.twig',
             ["formInscription"=>$formInscription->createView()]);
     }

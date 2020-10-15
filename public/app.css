@@ -456,6 +456,10 @@ h1{
         top: 0; left: 50%; /* à 50%/50% du parent référent */
         transform: translate(-50%, -50%);
     }
+    #divResultat2{
+        width: 70%;
+        height: auto;
+    }
 }
 
 /*  ///////////////////////////////////////////////  TABLETTE  //////////////////////////////  */
@@ -556,6 +560,10 @@ h1{
         top: 50%; left: 50%; /* à 50%/50% du parent référent */
         transform: translate(-50%, -50%);
     }
+    #divResultat2{
+        width: 60%;
+        height: auto;
+    }
 }
 
 
@@ -654,6 +662,10 @@ h1{
         top: 50%; left: 50%; /* à 50%/50% du parent référent */
         transform: translate(-50%, -50%);
     }
+    #divResultat2{
+        width: 20%;
+        height: auto;
+    }
 }
 /*   /////////////////////////////  HORIZONTAL  //////////////////////  */
 @media only screen and (orientation:landscape) {
@@ -751,6 +763,10 @@ h1{
         top: 50%; left: 50%; /* à 50%/50% du parent référent */
         transform: translate(-50%, -50%);
     }
+    #divResultat2{
+        width: 20%;
+        height: auto;
+    }
 }
 
 @media print and (max-width:21cm) {
@@ -762,8 +778,7 @@ h1{
 #divResultat2{
     box-shadow: #3b3f48 0.1em 0.1em 0.2em;
     color : white;
-    width: 70%;
-    height: auto;
+
     background-size: 60%;
     background-color: #f07e26;
     z-index : 400;
@@ -802,6 +817,7 @@ h1{
 
 /*//////////////inscription///////////////////////*/
 #formProfil{
+    font-family: Georgia, serif;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -815,22 +831,22 @@ h1{
     text-shadow: #3b3f48 0.1em 0.1em 0.2em;
     border-radius: 10%;
 
-
     border-width : 5px;
     border-style: solid;
     border-color: #3b3f48 ;
 }
-#formProfil input, #formProfil input[type=Checkbox]{
+#formProfil input[type=text],#formProfil input[type=email], .choice{
     border-radius: 5px;
     border-style: solid;
     border-color: #3b3f48;
     box-shadow: #3b3f48 0.2em 0.2em 0.4em;
-
 }
 .checkbox{
-    size: 50px;
-    box-shadow: #3b3f48 0.1em 0.1em 0.2em;
+    margin-left: -10%;
     border-radius: 5px;
+    border-style: solid;
+    border-color: #3b3f48;
+    box-shadow: #3b3f48 0.2em 0.2em 0.4em;
 }
 #btnProfil{
     margin-top: 2%;
@@ -849,9 +865,6 @@ h1{
     color : white;
 }
 
-#checkLabel, #checkLabel2{
-    margin :3px;
-}
 
 /* ////// FIN //////*/
 #phraseFin, #phraseFin2{
