@@ -172,6 +172,7 @@
       <workItem from="1602745488713" duration="541000" />
       <workItem from="1602762223823" duration="340000" />
       <workItem from="1602764621499" duration="102000" />
+      <workItem from="1602764959940" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
       <created>1601734594092</created>
@@ -278,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602670595246</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Parti admi : Inscription et Gestion utilisateur. Consultation des clients">
+      <created>1602764995304</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602764995304</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,11 +310,11 @@
     </state>
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.723@0.23.1280.723" timestamp="1602599651232" />
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
-    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602670594938">
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602764995029">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602629478004" />
-    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602670594938" />
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602764995029" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1602410237578" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1602280927366" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.728@0.23.1280.728" timestamp="1602283446749" />
