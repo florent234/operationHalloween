@@ -8,8 +8,15 @@ function ani($idFantome){
     function myFunction() {
         setInterval(function(){
             document.getElementById('resultatTirage').className = "";
+            document.getElementById('id_button').className = "btn_class";
             document.getElementById('divResultat2').className = "bonAchatGagnant2";
             }, 2000);
+    }
+    retour();
+    function retour() {
+        setInterval(function(){
+            window.location.href = "http://www.mavengames.fr/";
+        }, 10000);
     }
 }
 function ani2($idFantome){
@@ -36,7 +43,7 @@ function ani2($idFantome){
 
     function retour() {
         setInterval(function(){
-            window.location.href = "http://www.mavengames.fr/accueilHalloween";
+            window.location.href = "http://www.mavengames.fr/";
         }, 15000);
     }
 
