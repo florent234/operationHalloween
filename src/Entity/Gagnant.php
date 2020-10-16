@@ -19,16 +19,15 @@ class Gagnant
      * @ORM\Column(type="integer")
      */
     private $id;
-
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="integer")
      */
-    private $creneau;
+    private $idGagnant;
 
 
 
@@ -62,17 +61,17 @@ class Gagnant
     /**
      * @return mixed
      */
-    public function getCreneau()
+    public function getIdGagnant()
     {
-        return $this->creneau;
+        return $this->idGagnant;
     }
 
     /**
-     * @param mixed $creneau
+     * @param mixed $idGagnant
      */
-    public function setCreneau($creneau)
+    public function setIdGagnant($idGagnant)
     {
-        $this->creneau = $creneau;
+        $this->idGagnant = $idGagnant;
 
         return $this;
 

@@ -43,13 +43,13 @@ class ClientsController extends AbstractController
         $dateFin1 = date("2020-10-15 13:00");
 
         $dateDebut2 = date("2020-10-16 14:00");
-        $dateFin2 = date("2020-10-16 18:00");
+        $dateFin2 = date("2020-10-16 20:00");
 
-        $dateDebut3 = date("2020-10-17 14:00");
+        $dateDebut3 = date("2020-10-17 00:00");
         $dateFin3 = date("2020-10-17 18:00");
 
-        $dateDebut4 = date("2020-10-13 14:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-        $dateFin4 = date("2020-10-13 18:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateDebut4 = date("2020-10-17 00:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        $dateFin4 = date("2020-10-17 23:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
 
         if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
             $client->setTypeJeux('avecHotesse');
@@ -65,7 +65,7 @@ class ClientsController extends AbstractController
             $em->flush();
 
             if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
-                return $this->redirectToRoute('jeuxHalloween',[]);
+                return $this->redirectToRoute('jeuxHalloween',['id' => $client->getUserId()]);
             } else {
                 return $this->redirectToRoute('halloween',['id' => $client->getUserId()]);
             }
