@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2429578d-d0f4-4994-b42b-cee2e3b1253e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repository/BonachatsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Rand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/RandRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Gagnant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Gagnant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Joueur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BonAchats.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tirage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/JoueurRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TirageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/halloween2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/halloween2.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,18 +125,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/Client" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
-      <recent name="$PROJECT_DIR$/public/photos/fondHalloween1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/src/Entity" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/photos/Halloween" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/Client" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/photos/Halloween" />
+      <recent name="$PROJECT_DIR$/public/photos/fondHalloween1" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -183,6 +176,8 @@
       <workItem from="1602762223823" duration="340000" />
       <workItem from="1602764621499" duration="102000" />
       <workItem from="1602764959940" duration="342000" />
+      <workItem from="1602921974559" duration="1272000" />
+      <workItem from="1602923552814" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="css formulaire&#10;insertion image diff pour tablette&#10;fixe des erreurs dans css">
       <created>1601734594092</created>
@@ -296,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602764995304</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Refonte de la parti rand avec double sécurisation d'un Gagnant&#10;Reste à ajouter une valeur du randome dans la BDD pour controlle et modification rapide">
+      <created>1602889257712</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602889257712</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,19 +314,28 @@
     <MESSAGE value="Dernier vérification lundi 12 octobre" />
     <MESSAGE value="Favicon et css" />
     <MESSAGE value="Parti admi : Inscription et Gestion utilisateur. Consultation des clients" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parti admi : Inscription et Gestion utilisateur. Consultation des clients" />
+    <MESSAGE value="Refonte de la parti rand avec double sécurisation d'un Gagnant&#10;Reste à ajouter une valeur du randome dans la BDD pour controlle et modification rapide" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refonte de la parti rand avec double sécurisation d'un Gagnant&#10;Reste à ajouter une valeur du randome dans la BDD pour controlle et modification rapide" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="238" y="34" key="#Plugins" timestamp="1602923575810">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state x="238" y="34" key="#Plugins/0.23.1280.728@0.23.1280.728" timestamp="1602923575810" />
+    <state x="349" y="129" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602923031158">
+      <screen x="0" y="23" width="1280" height="726" />
+    </state>
+    <state x="349" y="129" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.726@0.23.1280.726" timestamp="1602923031158" />
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602599651232">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="466" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.723@0.23.1280.723" timestamp="1602599651232" />
     <state x="699" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1920.983@0.23.1920.983" timestamp="1601651767138" />
-    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602764995029">
+    <state x="217" y="23" key="CommitChangelistDialog2" timestamp="1602889257485">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1602629478004" />
-    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602764995029" />
+    <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1602889257485" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.726@0.23.1280.726" timestamp="1602410237578" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1602280927366" />
     <state x="217" y="23" key="CommitChangelistDialog2/0.23.1280.728@0.23.1280.728" timestamp="1602283446749" />
@@ -348,11 +359,11 @@
       <screen x="0" y="23" width="1280" height="726" />
     </state>
     <state x="401" y="94" key="RollbackChangesDialog/0.23.1280.726@0.23.1280.726" timestamp="1602855860204" />
-    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602670599913">
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1602889264817">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.723@0.23.1280.723" timestamp="1602629505878" />
-    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.724@0.23.1280.724" timestamp="1602670599913" />
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.724@0.23.1280.724" timestamp="1602889264817" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.726@0.23.1280.726" timestamp="1602284584609" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.727@0.23.1280.727" timestamp="1602280934227" />
     <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.728@0.23.1280.728" timestamp="1602283452137" />
