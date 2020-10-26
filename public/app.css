@@ -453,7 +453,7 @@ h1{
     #divResultatPhoto{
         width: auto;
         position: absolute; /* postulat de départ */
-        top: 0; left: 50%; /* à 50%/50% du parent référent */
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
         transform: translate(-50%, -50%);
     }
     #divResultat2{
@@ -571,13 +571,13 @@ h1{
 
 @media only  screen and (min-width:1030px)   {
 
-     html {
-         margin:0;
-         padding:0;
-     }
-     body{
-         background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
-         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    html {
+        margin:0;
+        padding:0;
+    }
+    body{
+        background: url("photos/Halloween/ECRAN_LARGE_1920x1980px.png") no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
         overflow: hidden;
         height: 100vh;
@@ -663,7 +663,7 @@ h1{
         transform: translate(-50%, -50%);
     }
     #divResultat2{
-        width: 20%;
+        width: 30%;
         height: auto;
     }
 }
@@ -764,7 +764,7 @@ h1{
         transform: translate(-50%, -50%);
     }
     #divResultat2{
-        width: 20%;
+        width: 30%;
         height: auto;
     }
 }
@@ -868,6 +868,7 @@ h1{
 
 /* ////// FIN //////*/
 #phraseFin, #phraseFin2{
+    z-index : 1002;
     width: 90%;
     color : white;
     vertical-align: central;

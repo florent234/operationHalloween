@@ -27,7 +27,7 @@ class ClientsController extends AbstractController
 
         $today = date("Y-m-d H:i");
 
-        /* $dateDebut1 = date("2020-10-24 14:00");
+        $dateDebut1 = date("2020-10-24 14:00");
         $dateFin1 = date("2020-10-24 18:00");
 
         $dateDebut2 = date("2020-10-28 14:00");
@@ -37,20 +37,20 @@ class ClientsController extends AbstractController
         $dateFin3 = date("2020-10-30 18:00");
 
         $dateDebut4 = date("2020-10-31 14:00");
-        $dateFin4 = date("2020-10-31 18:30"); */
+        $dateFin4 = date("2020-10-31 18:30");
+        /*
+                $dateDebut1 = date("2020-10-15 11:00");
+                $dateFin1 = date("2020-10-15 13:00");
 
-        $dateDebut1 = date("2020-10-15 11:00");
-        $dateFin1 = date("2020-10-15 13:00");
+                $dateDebut2 = date("2020-10-16 14:00");
+                $dateFin2 = date("2020-10-16 20:00");
 
-        $dateDebut2 = date("2020-10-16 14:00");
-        $dateFin2 = date("2020-10-16 20:00");
+                $dateDebut3 = date("2020-10-17 00:00");
+                $dateFin3 = date("2020-10-17 18:00");
 
-        $dateDebut3 = date("2020-10-17 00:00");
-        $dateFin3 = date("2020-10-17 18:00");
-
-        $dateDebut4 = date("2020-10-17 00:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-        $dateFin4 = date("2020-10-17 23:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
-
+                $dateDebut4 = date("2020-10-17 00:00"); ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+                $dateFin4 = date("2020-10-17 23:00");  ////// A MODIFIER AVEC LA DATE DU 31 OCTOBRE
+        */
         if ($dateDebut1<$today & $today<$dateFin1 || $dateDebut2<$today & $today<$dateFin2 || $dateDebut3<$today &  $today<$dateFin3  || $dateDebut4<$today & $today<$dateFin4){
             $client->setTypeJeux('avecHotesse');
         } else {
